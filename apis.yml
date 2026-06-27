@@ -126,15 +126,15 @@ apis:
     url: https://help.quantcast.com/docs/measure
   - type: LiveTag
     url: https://help.quantcast.com/docs/tagging-with-the-quantcast-live-tag
-  - type: SDK
+  - type: SDKs
     url: https://github.com/quantcast/ios-measurement
-  - type: SDK
+  - type: SDKs
     url: https://github.com/quantcast/android-measurement
-  - type: SDK
+  - type: SDKs
     url: https://github.com/quantcast/roku-measurement
-  - type: SDK
+  - type: SDKs
     url: https://github.com/quantcast/phonegap-measurement
-  - type: Integration
+  - type: Integrations
     url: https://github.com/quantcast/gtm-measure-sst
 common:
 - type: Website

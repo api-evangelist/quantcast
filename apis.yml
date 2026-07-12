@@ -137,6 +137,8 @@ apis:
   - type: Integrations
     url: https://github.com/quantcast/gtm-measure-sst
 common:
+- type: DomainSecurity
+  url: security/quantcast-domain-security.yml
 - type: Website
   url: https://www.quantcast.com
 - type: Platform

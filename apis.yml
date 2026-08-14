@@ -55,7 +55,7 @@ tags:
 - Audience Graph
 url: https://raw.githubusercontent.com/api-evangelist/quantcast/refs/heads/main/apis.yml
 created: '2026-05-25'
-modified: '2026-05-25'
+modified: '2026-08-13'
 specificationVersion: '0.20'
 apis:
 - aid: quantcast:quantcast-platform-graphql-api
@@ -93,6 +93,11 @@ apis:
     url: https://auth.quantcast.com/oauth2/default/v1/token
   - url: graphql/quantcast-graphql.md
     type: GraphQL
+  - type: Postman
+    url: https://developers.quantcast.com/docs/QuantcastDeveloperAPI.postman_collection.json
+    name: Quantcast Developer API Postman collection
+  - type: Recipes
+    url: https://developers.quantcast.com/docs/graphql-api/usage/recipes/
 - aid: quantcast:quantcast-conversion-api
   name: Quantcast Conversion API
   description: >-
@@ -127,6 +132,7 @@ apis:
     receive demographic, psychographic, and cross-device audience
     insights through the Quantcast Measure UI.
   humanURL: https://help.quantcast.com/docs/measure
+  baseURL: https://pixel.quantserve.com
   tags:
   - Measurement
   - Tagging
@@ -157,26 +163,50 @@ common:
 - type: Measure
   url: https://www.quantcast.com/measure/
 - type: Developers
-  url: https://developers.quantcast.com
+  url: https://developers.quantcast.com/docs/
+- type: DeveloperPortal
+  url: https://developers.quantcast.com/docs/
 - type: Documentation
   url: https://developers.quantcast.com/docs/graphql-api
+- type: APIReference
+  url: https://developers.quantcast.com/docs/graphql-api/reference/
+- type: GettingStarted
+  url: https://developers.quantcast.com/docs/get-started/
+- type: Postman
+  url: https://developers.quantcast.com/docs/QuantcastDeveloperAPI.postman_collection.json
+  name: Quantcast Developer API Postman collection
 - type: HelpCenter
+  url: https://help.quantcast.com
+- type: Support
   url: https://help.quantcast.com
 - type: Authentication
   url: https://developers.quantcast.com/docs/get-started/authentication/
 - type: Company
-  url: https://www.quantcast.com/company/
+  url: https://www.quantcast.com/about-us/
 - type: Press
   url: https://www.quantcast.com/press/
 - type: Blog
-  url: https://www.quantcast.com/blog/
+  url: https://www.quantcast.com/resources/blog/
 - type: Careers
   url: https://www.quantcast.com/careers/
 - type: Contact
-  url: https://www.quantcast.com/contact/
+  url: https://www.quantcast.com/contact-us/
+- type: SignUp
+  url: https://www.quantcast.com/signup/
+- type: Login
+  url: https://www.quantcast.com/login/
 - type: Privacy
   url: https://www.quantcast.com/privacy/
+- type: PrivacyPolicy
+  url: https://www.quantcast.com/privacy/
+- type: TermsOfService
+  url: https://legal.quantcast.com/
+  name: Quantcast Legal Center — Measure and Publisher Terms of Service, Buyer Terms, data privacy addenda
+- type: StatusPage
+  url: https://status.quantcast.com
 - type: GitHub
+  url: https://github.com/quantcast
+- type: GitHubOrganization
   url: https://github.com/quantcast
 - type: LinkedIn
   url: https://www.linkedin.com/company/quantcast
@@ -186,6 +216,46 @@ common:
   url: https://www.youtube.com/user/Quantcast
 - type: Acquisition
   url: https://www.quantcast.com/press-release/inmobi-acquires-quantcast-choice-to-enhance-frictionless-consent-management-for-publishers/
+- type: Packages
+  url: packages/quantcast-packages.yml
+- type: SDKs
+  url: packages/quantcast-packages.yml
+  name: Quantcast client libraries and SDKs
+- type: WellKnown
+  url: well-known/quantcast-well-known.yml
+- type: Authentication
+  url: authentication/quantcast-authentication.yml
+  name: Quantcast authentication profile
+- type: OAuthScopes
+  url: scopes/quantcast-scopes.yml
+- type: RateLimits
+  url: rate-limits/quantcast-rate-limits.yml
+- type: Plans
+  url: plans/quantcast-plans-pricing.yml
+- type: Conventions
+  url: conventions/quantcast-conventions.yml
+- type: ErrorCatalog
+  url: errors/quantcast-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/quantcast-lifecycle.yml
+- type: Conformance
+  url: conformance/quantcast-conformance.yml
+- type: DataModel
+  url: data-model/quantcast-data-model.yml
+- type: Components
+  url: components/quantcast-components.yml
+- type: MCPServer
+  url: mcp/quantcast-mcp.yml
+  name: Quantcast MCP candidate manifest (no server published)
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/quantcast-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-08-13'
+  status: enriched
+  artifacts_added: 20
+  pass: local-v1

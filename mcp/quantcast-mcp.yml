@@ -1,0 +1,170 @@
+generated: '2026-08-13'
+method: derived
+status: candidate
+source: https://developers.quantcast.com/docs/graphql-api/reference/queries/
+notes: >-
+  No Quantcast MCP server exists. Searched 2026-08-13: the developer portal,
+  the help centre llms.txt (419 pages, zero MCP references), the quantcast
+  GitHub organisation (17 repos, none MCP), npm (@quantcast-labs publishes
+  only events-sdk), and the public MCP registries. Live probes:
+  https://mcp.quantcast.com/mcp did not resolve,
+  https://developers.quantcast.com/mcp returned 500 (that host 500s
+  everywhere outside /docs/*), https://help.quantcast.com/mcp returned 404.
+  The candidate tool list below is DERIVED from the 25 GraphQL queries
+  Quantcast publishes in its schema reference plus the two documented
+  Conversion API endpoints — it is a design proposal, not something Quantcast
+  ships.
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: oauth
+  auth_note: >-
+    Any server built against this surface would carry the Quantcast Platform
+    OAuth 2.0 client-credentials flow (scopes api_access, read_reports) — see
+    authentication/quantcast-authentication.yml.
+  verified: probed
+server:
+  name: quantcast
+  transport: http
+  url: null
+surfaces:
+  graphql:
+    endpoint: https://developers.quantcast.com/api/v2/graphql
+    introspection: gated
+    introspection_note: >-
+      POST {__schema{queryType{name}}} returned HTTP 401
+      {"error":"No authentication token in request"} on 2026-08-13, so the
+      live SDL could not be captured. Tool names and descriptions below come
+      from the published schema reference pages, which are complete for
+      queries; input schemas would require authenticated introspection.
+    mutations: 0
+    mutations_note: >-
+      The published reference states plainly "The API doesn't have any
+      mutation types at this point." Every candidate tool below is therefore
+      read-only.
+  rest:
+    endpoint: https://pixel.quantserve.com/conversion
+    note: Conversion API — write surface, keyed by account id, no bearer token.
+tools:
+- name: accountMetricsReport
+  description: Get a metrics report for ad delivery and performance — the API equivalent of Report Builder.
+  source_operation: graphql/quantcast-graphql.md#accountMetricsReport
+  read_only: true
+- name: availableBreakdownsAndMetrics
+  description: List the breakdowns and metrics available for accountMetricsReport on an account.
+  source_operation: graphql/quantcast-graphql.md#availableBreakdownsAndMetrics
+  read_only: true
+- name: organizations
+  description: Fetch the organizations the credential can see.
+  source_operation: graphql/quantcast-graphql.md#organizations
+  read_only: true
+- name: accounts
+  description: Fetch account resources the credential is assigned to.
+  source_operation: graphql/quantcast-graphql.md#accounts
+  read_only: true
+- name: campaigns
+  description: Fetch campaigns.
+  source_operation: graphql/quantcast-graphql.md#campaigns
+  read_only: true
+- name: adsets
+  description: Fetch ad sets.
+  source_operation: graphql/quantcast-graphql.md#adsets
+  read_only: true
+- name: creatives
+  description: Fetch creative resources.
+  source_operation: graphql/quantcast-graphql.md#creatives
+  read_only: true
+- name: creativeAssignments
+  description: Fetch creative-to-ad-set assignments.
+  source_operation: graphql/quantcast-graphql.md#creativeAssignments
+  read_only: true
+- name: surveys
+  description: Fetch brand-lift survey resources.
+  source_operation: graphql/quantcast-graphql.md#surveys
+  read_only: true
+- name: keyEvents
+  description: Fetch change events on a resource.
+  source_operation: graphql/quantcast-graphql.md#keyEvents
+  read_only: true
+- name: members
+  description: Fetch members of an organization.
+  source_operation: graphql/quantcast-graphql.md#members
+  read_only: true
+- name: roles
+  description: Fetch account-level roles defined under an organization.
+  source_operation: graphql/quantcast-graphql.md#roles
+  read_only: true
+- name: teams
+  description: List teams defined under an organization.
+  source_operation: graphql/quantcast-graphql.md#teams
+  read_only: true
+- name: teamMembers
+  description: List members associated with a team.
+  source_operation: graphql/quantcast-graphql.md#teamMembers
+  read_only: true
+- name: userAccountAssignments
+  description: List non-owner users assigned to accounts via roles.
+  source_operation: graphql/quantcast-graphql.md#userAccountAssignments
+  read_only: true
+- name: countries
+  description: Filtered list of countries for geo targeting.
+  source_operation: graphql/quantcast-graphql.md#countries
+  read_only: true
+- name: states
+  description: List of State objects for geo targeting.
+  source_operation: graphql/quantcast-graphql.md#states
+  read_only: true
+- name: cities
+  description: Filtered list of cities for geo targeting.
+  source_operation: graphql/quantcast-graphql.md#cities
+  read_only: true
+- name: metroAreas
+  description: Filtered list of media markets (DMAs).
+  source_operation: graphql/quantcast-graphql.md#metroAreas
+  read_only: true
+- name: postcodes
+  description: Postcode objects matching a query.
+  source_operation: graphql/quantcast-graphql.md#postcodes
+  read_only: true
+- name: isps
+  description: ISPs sorted by name with geo location codes.
+  source_operation: graphql/quantcast-graphql.md#isps
+  read_only: true
+- name: asyncMetricsReport
+  description: '[Beta] Request an async metrics report.'
+  source_operation: graphql/quantcast-graphql.md#asyncMetricsReport
+  read_only: true
+- name: asyncMetricsReportDownloadURL
+  description: '[Beta] Request a download URL for an async metrics report.'
+  source_operation: graphql/quantcast-graphql.md#asyncMetricsReportDownloadURL
+  read_only: true
+- name: asyncAttributedActionsReport
+  description: '[Beta] Request an async attributed actions report.'
+  source_operation: graphql/quantcast-graphql.md#asyncAttributedActionsReport
+  read_only: true
+- name: asyncAttributedActionsReportDownloadURL
+  description: '[Beta] Request a download URL for an async attributed actions report.'
+  source_operation: graphql/quantcast-graphql.md#asyncAttributedActionsReportDownloadURL
+  read_only: true
+- name: reportConversions
+  description: >-
+    Report offline conversion events server-to-server. POST a JSON array of
+    conversion objects to /conversion with the account id in the `a` query
+    parameter. This is the only write operation on the whole Quantcast public
+    surface.
+  source_operation: https://help.quantcast.com/docs/tagging-with-the-quantcast-live-tag-using-the-conversion-api
+  read_only: false
+- name: acquireBrowserToken
+  description: >-
+    Acquire a Quantcast browser token for a user so server-side conversions
+    can be linked back to web activity. Requires the consent signals
+    (gdpr/gdpr_consent, gpp/gpp_sid, us_privacy) documented for the endpoint.
+  source_operation: https://help.quantcast.com/docs/tagging-with-the-quantcast-live-tag-using-the-conversion-api
+  read_only: true
+coverage:
+  graphql_queries_published: 25
+  graphql_mutations_published: 0
+  rest_endpoints_published: 2
+  tools_proposed: 27

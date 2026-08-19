@@ -1,0 +1,118 @@
+generated: '2026-08-13'
+method: searched
+source: https://developers.quantcast.com/docs/graphql-api/usage/rate-limits/
+limit_count: 5
+note: >-
+  Quantcast publishes an unusually complete rate-limit contract for the
+  GraphQL API: two independent token buckets (request count and query
+  complexity), a query-depth ceiling, a documented refund rule, and the
+  remaining-token counters returned in every response. Because the surface is
+  GraphQL, the runtime signal is NOT an HTTP header — it is the
+  extensions.rateLimit object on the JSON response body. An agent must read
+  the body, not the headers.
+limits:
+- id: graphql-request-rate
+  api: Quantcast Platform GraphQL API
+  scope: per-user
+  scope_note: enforced per authenticated user / API credential
+  algorithm: token-bucket
+  limit: 10000
+  unit: requests
+  window: 1m
+  source: https://developers.quantcast.com/docs/graphql-api/usage/rate-limits/
+- id: graphql-query-complexity
+  api: Quantcast Platform GraphQL API
+  scope: per-user
+  algorithm: token-bucket
+  limit: 10000
+  unit: complexity-tokens
+  window: 1m
+  cost_model:
+    scalar_enum_or_simple_type: 1
+    graphql_object: 2
+    example: 'total_complexity = 2 + 2 * (2 + 1 + 1 + 2 * (2 + 1 + 1)) = 26'
+  refunds: >-
+    Users are refunded the difference between the complexity of the request
+    and the complexity of the actual response, so an over-large limit: on a
+    small result set is not charged in full.
+  source: https://developers.quantcast.com/docs/graphql-api/usage/rate-limits/
+- id: graphql-query-depth
+  api: Quantcast Platform GraphQL API
+  scope: per-request
+  limit: 50
+  unit: nested-levels
+  note: >-
+    Maximum accepted query depth. The docs observe that a high-depth query
+    will almost always breach the complexity limit before the depth limit.
+  source: https://developers.quantcast.com/docs/graphql-api/usage/rate-limits/
+- id: reporting-api-request-rate
+  api: Quantcast Platform Reporting API (legacy REST, sunset)
+  scope: per-user
+  limit: 5
+  unit: requests
+  window: 1s
+  status_on_exhaustion: 429
+  source: https://developers.quantcast.com/docs/reporting-api/reference/
+- id: reporting-api-concurrency
+  api: Quantcast Platform Reporting API (legacy REST, sunset)
+  scope: per-user
+  limit: 10
+  unit: concurrent-requests
+  status_on_exhaustion: 429
+  source: https://developers.quantcast.com/docs/reporting-api/reference/
+runtime_signal:
+  transport: response-body
+  location: extensions.rateLimit
+  applies_to: Quantcast Platform GraphQL API
+  fields:
+  - name: queryComplexityRemaining
+    description: Complexity tokens remaining before reset.
+  - name: requestRemaining
+    description: Requests remaining before reset.
+  - name: queryComplexityResetTime
+    description: Timestamp at which complexity tokens reset.
+  - name: queryComplexityLimit
+    description: Complexity tokens granted at reset.
+  - name: requestLimit
+    description: Request tokens granted at reset.
+  - name: requestResetTime
+    description: Timestamp at which request tokens reset.
+  - name: queryComplexity
+    description: Complexity actually charged for this query.
+  example: |
+    {
+      "extensions": {
+        "rateLimit": {
+          "queryComplexityRemaining": 5800,
+          "requestRemaining": 9600,
+          "queryComplexityResetTime": "2024-01-01T00:00:00",
+          "queryComplexityLimit": 10000,
+          "requestLimit": 10000,
+          "requestResetTime": "2024-01-01T00:00:00",
+          "queryComplexity": 50
+        }
+      }
+    }
+  source: https://developers.quantcast.com/docs/graphql-api/usage/rate-limits/
+headers:
+  published: false
+  note: >-
+    No X-RateLimit-* or RFC 9331 RateLimit-* response headers are documented
+    for either API. The GraphQL surface signals in the response body; the
+    legacy REST Reporting API documents only the 429 status code.
+exhaustion_behaviour:
+  graphql: >-
+    The request is denied and an error is returned explaining which limit was
+    breached; the extensions.rateLimit object still reports when each bucket
+    resets.
+  rest: HTTP 429 Too Many Requests; retry after waiting.
+other_ceilings:
+- id: reporting-api-response-size
+  limit: 10MB
+  status: 413
+  note: A report request whose response exceeds 10MB returns 413 Report Too Large.
+  source: https://developers.quantcast.com/docs/reporting-api/reference/
+- id: reporting-api-lookback
+  limit: 13 months
+  note: Requests cannot be made for data beyond 13 months.
+  source: https://developers.quantcast.com/docs/reporting-api/reference/

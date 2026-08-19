@@ -1,0 +1,153 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  https://developers.quantcast.com/docs/, https://help.quantcast.com/docs/,
+  well-known/quantcast-openid-configuration.json
+note: >-
+  Quantcast's cross-cutting standards posture is concentrated in two places:
+  OAuth 2.0 / OIDC for platform API access (delegated to an Okta tenant), and
+  the IAB privacy and taxonomy suite for the tagging and targeting surface.
+  It publishes no security-certification program (no SOC 2 / ISO 27001 /
+  PCI attestation page was found on any Quantcast host), so no Compliance
+  pointer is emitted.
+standards:
+- id: oauth2
+  name: OAuth 2.0 (RFC 6749)
+  conforms: true
+  evidence: >-
+    Client-credentials grant against
+    https://auth.quantcast.com/oauth2/default/v1/token with HTTP Basic client
+    authentication, returning token_type Bearer, expires_in and scope.
+  source: https://developers.quantcast.com/docs/get-started/authentication/
+- id: rfc8414-oauth-authorization-server-metadata
+  name: OAuth 2.0 Authorization Server Metadata (RFC 8414)
+  conforms: true
+  evidence: >-
+    https://auth.quantcast.com/.well-known/oauth-authorization-server returns
+    200 with a valid metadata document.
+  artifact: well-known/quantcast-oauth-authorization-server.json
+- id: oidc-discovery
+  name: OpenID Connect Discovery 1.0
+  conforms: true
+  evidence: >-
+    https://auth.quantcast.com/.well-known/openid-configuration returns 200
+    with issuer, authorization_endpoint, token_endpoint, userinfo_endpoint,
+    jwks_uri, registration_endpoint and RS256 id_token signing. Scope is
+    platform user sign-in, not the Platform API.
+  artifact: well-known/quantcast-openid-configuration.json
+- id: rfc6750-bearer-token
+  name: OAuth 2.0 Bearer Token Usage (RFC 6750)
+  conforms: true
+  evidence: 'Authorization: Bearer <access_token> header required on every GraphQL request.'
+  source: https://developers.quantcast.com/docs/graphql-api/usage/requests-to-graphql/
+- id: graphql
+  name: GraphQL
+  conforms: true
+  evidence: >-
+    Single POST endpoint at /api/v2/graphql; published schema reference for
+    queries, objects, enums, input objects and scalars; Relay-style
+    edges/pageInfo connection shape; rate-limit metadata returned under the
+    spec's `extensions` key.
+  source: https://developers.quantcast.com/docs/graphql-api/
+- id: iab-tcf-v2
+  name: IAB Europe Transparency & Consent Framework v2
+  conforms: true
+  evidence: >-
+    The Conversion API token endpoint accepts gdpr and gdpr_consent (a
+    Base64-URL TC string) and may refuse to issue a token without adequate
+    consent signals. Quantcast Choice, the company's own TCF v2 CMP, was
+    divested to InMobi in August 2023.
+  source: https://help.quantcast.com/docs/tagging-with-the-quantcast-live-tag-using-the-conversion-api
+- id: iab-us-privacy
+  name: IAB US Privacy (CCPA) API
+  conforms: true
+  evidence: 'us_privacy parameter accepted on the token endpoint; documented as deprecated in favour of GPP.'
+  source: https://help.quantcast.com/docs/tagging-with-the-quantcast-live-tag-using-the-conversion-api
+- id: iab-gpp
+  name: IAB Global Privacy Platform
+  conforms: true
+  evidence: 'gpp and gpp_sid parameters accepted on the token endpoint; documented as the preferred signal.'
+  source: https://help.quantcast.com/docs/tagging-with-the-quantcast-live-tag-using-the-conversion-api
+- id: iab-content-taxonomy-2.1
+  name: IAB Content Taxonomy 2.1
+  conforms: true
+  evidence: 'Account.iabCategoryId is documented as "IAB ID for the account. (IAB Taxonomy 2.1)".'
+  source: https://developers.quantcast.com/docs/graphql-api/reference/objects/
+- id: openrtb
+  name: OpenRTB creative attributes
+  conforms: true
+  evidence: >-
+    Creative.rtbAttribute is documented as "Optional field used to declare
+    OpenRTB attributes for the creative".
+  source: https://developers.quantcast.com/docs/graphql-api/reference/objects/
+- id: iso-8601
+  name: ISO 8601 dates and timestamps
+  conforms: true
+  evidence: 'DateTime fields documented as ISO-8601 compliant; report timezones use ISO 8601 TZ identifiers.'
+- id: iso-4217
+  name: ISO 4217 currency codes
+  conforms: true
+  evidence: 'Account.currencyCode / Organization.currencyCode documented as 3-letter ISO-4217.'
+- id: iso-3166-1-alpha-2
+  name: ISO 3166-1 alpha-2 country codes
+  conforms: true
+  evidence: 'Account.countryCode documented as 2-letter ISO 3166-1 alpha-2.'
+- id: iso-639-1
+  name: ISO 639-1 language codes
+  conforms: true
+  evidence: 'Creative.language enumeration values documented as ISO 639-1 two-letter codes.'
+- id: apple-skadnetwork
+  name: Apple SKAdNetwork
+  conforms: true
+  evidence: 'SKANConfig object published in the GraphQL schema reference.'
+  source: https://developers.quantcast.com/docs/graphql-api/reference/objects/
+- id: rfc9457-problem-details
+  name: RFC 9457 Problem Details for HTTP APIs
+  conforms: false
+  evidence: >-
+    The legacy Reporting API defines its own error envelope
+    {status, error, message, request_id} with content type application/json;
+    no application/problem+json is documented anywhere.
+  source: https://developers.quantcast.com/docs/reporting-api/reference/
+- id: rfc8594-sunset-header
+  name: RFC 8594 Sunset HTTP header
+  conforms: false
+  evidence: >-
+    The Reporting API sunset is announced only in the documentation title
+    ("Sunset by Oct 1st, 2024"); no Sunset or Deprecation response header is
+    documented.
+- id: rfc9116-security-txt
+  name: RFC 9116 security.txt
+  conforms: false
+  evidence: 'No /.well-known/security.txt on any Quantcast host (probed 2026-08-13).'
+- id: a2a
+  name: A2A Agent Card
+  conforms: false
+  evidence: '/.well-known/agent-card.json and /.well-known/agent.json miss on every host.'
+- id: mcp
+  name: Model Context Protocol
+  conforms: false
+  evidence: 'No MCP server published; see mcp/quantcast-mcp.yml.'
+- id: asyncapi
+  name: AsyncAPI
+  conforms: false
+  evidence: >-
+    Quantcast documents no webhook, streaming or event-delivery surface —
+    reporting is pull-only, and the Conversion API is inbound. Not
+    applicable rather than missing.
+- id: openapi
+  name: OpenAPI
+  conforms: false
+  evidence: >-
+    No OpenAPI or Swagger document is published for either the GraphQL API or
+    the legacy REST Reporting API. Probed the API host root, the docs host and
+    the pixel host on 2026-08-13; the only machine-readable contract Quantcast
+    ships is the Postman collection at
+    https://developers.quantcast.com/docs/QuantcastDeveloperAPI.postman_collection.json
+certifications_published: []
+certifications_note: >-
+  No trust centre, security page or certification listing was found.
+  trust.quantcast.com and security.quantcast.com do not resolve;
+  www.quantcast.com/security/ and /trust-center/ return 404. Legal and
+  privacy commitments are published at https://legal.quantcast.com/ but name
+  no security attestation.

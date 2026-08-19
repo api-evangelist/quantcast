@@ -1,0 +1,173 @@
+generated: '2026-08-13'
+method: derived
+source: https://developers.quantcast.com/docs/graphql-api/reference/objects/
+note: >-
+  Derived from the published GraphQL schema reference (93 object types), not
+  from introspection — live introspection at
+  https://developers.quantcast.com/api/v2/graphql returns HTTP 401 without a
+  bearer token. Relationships below are taken from documented object fields:
+  a field whose type is another object is a has_one, a field whose type is a
+  *Connections type is a has_many, and a documented `<entity>Id` scalar is a
+  belongs_to. Only entities Quantcast documents are listed.
+domain_summary: >-
+  Organization owns Accounts and contains Users; a User is assigned to
+  Accounts (directly by Role, or through a Team); an Account contains
+  Campaigns; a Campaign contains Ad Sets; an Ad Set delivers Creatives
+  through Creative Assignments. Reporting hangs off the Account.
+entities:
+- name: Organization
+  description: A legal entity on the platform; invoices are sent here. Contains one or more Accounts.
+  id: id (Long)
+  key_fields: [name, state, currencyCode, contractStart, contractEnd, previewEndDate]
+  relationships:
+  - {type: has_many, target: Account, via: accounts}
+  - {type: has_many, target: OrgMember, via: organizationMembers}
+  - {type: has_many, target: Role, via: roles}
+  - {type: has_many, target: Team, via: teams}
+- name: Account
+  description: An advertisement client. Carries the pCode dataset identifier used when tagging sites.
+  id: id (Long)
+  key_fields: [name, pcode, timeZone, currencyCode, countryCode, iabCategoryId, url, archived, viewAttributionWindowHours, clickAttributionWindowHours]
+  relationships:
+  - {type: belongs_to, target: Organization, via: organizationId}
+  - {type: has_one, target: Organization, via: organization}
+  - {type: has_many, target: Campaign, via: campaigns}
+  - {type: has_many, target: Creative, via: creatives}
+  - {type: has_many, target: KeyEvent, via: keyEvents}
+  - {type: has_many, target: Team, via: teams}
+  - {type: has_many, target: UserAccountAssignment, via: userAccountAssignments}
+  - {type: has_one, target: AccountCategory, via: accountCategory}
+- name: Campaign
+  description: An objective plus a group of ad sets.
+  id: id (Long)
+  key_fields: [name, state, goal, goalAmount, billingRefId, appBundleIds, orderTrailId]
+  relationships:
+  - {type: belongs_to, target: Account, via: accountId}
+  - {type: has_one, target: Account, via: account}
+  - {type: has_many, target: AdSet, via: adsets}
+  - {type: has_many, target: KeyEvent, via: keyEvents}
+  - {type: has_one, target: MultiSegment, via: conversionEvents}
+  - {type: has_many, target: qapi_TrafficUrlAudience, via: trafficUrlAudiences}
+- name: AdSet
+  description: The delivery configuration — budget, audience, goals, schedule, creatives.
+  id: id (Long)
+  key_fields: [name, state, budget, budgetType, ecpmCap, viewability, siteListIds, ipSuppressionListId, iasSegmentListId, dvSegmentListId]
+  relationships:
+  - {type: belongs_to, target: Account, via: accountId}
+  - {type: belongs_to, target: Campaign, via: campaignId}
+  - {type: has_one, target: CustomAudience, via: audience}
+  - {type: has_one, target: FrequencyTargeting, via: frequencyTargetingConfig}
+  - {type: has_one, target: FrequencyCap, via: frequencyCap}
+  - {type: has_one, target: LanguageTargeting, via: languageConfig}
+  - {type: has_many, target: DayPartingSchedule, via: dayParting}
+  - {type: has_many, target: OverrideDay, via: overrideDayConfig}
+- name: Creative
+  description: The visual served by a campaign — display, native, video, CTV or audio.
+  id: id (Long)
+  key_fields: [name, type, language, rtbAttribute]
+  relationships:
+  - {type: belongs_to, target: Account, via: accountId}
+  - {type: has_one, target: DisplayCreativeData, via: display}
+  - {type: has_one, target: NativeCreativeData, via: native}
+  - {type: has_one, target: VideoCreativeData, via: video}
+  - {type: has_one, target: AudioCreativeData, via: audio}
+  - {type: has_many, target: Campaign, via: campaigns}
+- name: CreativeAssignment
+  description: The join between a creative and an ad set, carrying targeting type, state and schedule.
+  id: composite (adSetId + creativeId)
+  key_fields: [targetingType, state, created_at, updated_at]
+  relationships:
+  - {type: belongs_to, target: AdSet, via: adSetId}
+  - {type: belongs_to, target: Creative, via: creativeId}
+  - {type: has_one, target: Creative, via: creative}
+  - {type: has_one, target: CreativeSchedules, via: creativeSchedules}
+- name: CustomAudience
+  description: Audience targeting for an ad set — geo, demographics, interest and event segments.
+  id: null
+  key_fields: [retargetingWindowHours, interestSegments, suppressedInterestSegments, suppressionEvents]
+  relationships:
+  - {type: has_one, target: Geographic, via: geo}
+  - {type: has_one, target: Demographics, via: demographics}
+  - {type: has_many, target: MultiSegment, via: interestSegments}
+  deprecated_fields: [prospectingEvents, retargetingEvents, frequencyCap, includeCookielessTargeting, cookielessTargetingOnly]
+- name: Survey
+  description: A brand-lift study measuring the impact of a campaign on brand perception.
+  id: id (Long)
+  key_fields: [name, budget, budgetType, currency, state, scope, controlBudgetSplit, startTime, endTime]
+  relationships:
+  - {type: belongs_to, target: Account, via: accountId}
+  - {type: belongs_to, target: AdSet, via: adsetId}
+  - {type: belongs_to, target: Campaign, via: campaignId}
+  - {type: has_one, target: SurveyQuestion, via: question}
+  - {type: has_many, target: SurveyCreativePointer, via: surveyCreativePointers}
+- name: OrgMember
+  description: A user in an organization, with an organizational role.
+  id: userId (String)
+  key_fields: [role, active, userFullName, userEmail]
+  relationships:
+  - {type: has_many, target: UserAccountAssignment, via: userAccountAssignments}
+  - {type: has_many, target: TeamMember, via: teamAssignments}
+- name: Role
+  description: An account-level permission set applied to non-owner users.
+  id: id (String)
+  key_fields: [name, type, actions, numberOfUsers]
+  relationships:
+  - {type: has_many, target: UserAccountAssignment, via: userAccountAssignments}
+- name: Team
+  description: A group of users with access to a subset of an organization's accounts.
+  id: id (String)
+  key_fields: [name, accessAllAccounts, numberOfAccounts, numberOfUsers]
+  relationships:
+  - {type: belongs_to, target: Organization, via: organizationId}
+  - {type: has_one, target: Organization, via: organization}
+  - {type: has_many, target: Account, via: accounts}
+  - {type: has_many, target: TeamMember, via: members}
+- name: TeamMember
+  description: A user's membership of a team, with the role that grants account access.
+  id: composite (teamId + userId)
+  key_fields: [userFullName, userEmail]
+  relationships:
+  - {type: belongs_to, target: Team, via: teamId}
+  - {type: belongs_to, target: Role, via: roleId}
+  - {type: has_one, target: Team, via: team}
+  - {type: has_one, target: Role, via: role}
+- name: UserAccountAssignment
+  description: A direct assignment of a non-owner user to an account through a role.
+  id: composite (userId + accountId)
+  key_fields: [userFullName, userEmail]
+  relationships:
+  - {type: belongs_to, target: Account, via: accountId}
+  - {type: belongs_to, target: Role, via: roleId}
+  - {type: has_one, target: Account, via: account}
+  - {type: has_one, target: Role, via: role}
+- name: KeyEvent
+  description: A recorded change to a platform resource — the audit surface.
+  relationships:
+  - {type: belongs_to, target: Account, via: accountId}
+- name: MetricsReportResponseRow
+  description: One row of a metrics report — a map of breakdowns, a map of metrics and a metadata map.
+  relationships:
+  - {type: belongs_to, target: Account, via: accountId}
+  note: Returned by accountMetricsReport; shape is entry-map based, not a fixed column set.
+reference_data_entities:
+  note: >-
+    Read-only lookup collections used to build targeting, each with its own
+    query and *Connections type.
+  entities: [Country, State, City, MetroArea, Postcode, ISP, ISPLocation, AccountCategory, Breakdown, Metric]
+conversion_api_model:
+  source: https://help.quantcast.com/docs/tagging-with-the-quantcast-live-tag-using-the-conversion-api
+  note: A separate, un-versioned document model; it shares no types with the GraphQL schema.
+  objects:
+  - name: conversion
+    fields: [name (required), time, url, referer]
+  - name: user
+    fields: [token, client_user_agent, client_ip, external_id, email (SHA-256 only)]
+    rule: either token, or client_user_agent + client_ip, must be present
+  - name: event
+    fields: [labels, orderid, revenue, product_category]
+counts:
+  object_types_published: 93
+  entities_modelled: 16
+  queries: 25
+  mutations: 0
+render: null

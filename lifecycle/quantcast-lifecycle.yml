@@ -1,0 +1,106 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  https://developers.quantcast.com/docs/, https://status.quantcast.com,
+  https://help.quantcast.com/docs/
+note: >-
+  Quantcast runs an Atlassian Statuspage and has executed one real API
+  deprecation — the REST Reporting API was announced for sunset by
+  1 October 2024 in favour of MetricsReport on the GraphQL API. There is no
+  written deprecation POLICY (no notice period, no Sunset/Deprecation header
+  support, no versioning policy page) and no changelog or release notes for
+  either API. The developer portal itself carries a maintenance signal worth
+  recording: every path outside /docs/* returns HTTP 500, and the whole site
+  is served with meta robots noindex,nofollow and a "Copyright © 2024"
+  footer.
+versioning:
+  scheme: uri-path
+  current: v2
+  path: /api/v2/graphql
+  policy_url: null
+  policy_note: >-
+    No published versioning policy. v2 is the only version the portal
+    documents; there is no v1 documentation and no statement of how long a
+    version is supported.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  deprecation_header: false
+  note: >-
+    Deprecation is communicated in documentation prose and page titles only.
+    No RFC 8594 Sunset or Deprecation response header is documented.
+  deprecated_apis:
+  - name: Quantcast Platform Reporting API (REST)
+    status: sunset-announced
+    announced_sunset: '2024-10-01'
+    docs: https://developers.quantcast.com/docs/reporting-api/
+    statement: >-
+      "The Reporting API (RESTful) is a legacy API. We have ceased adding new
+      features and have lowered its support priority. We strongly encourage
+      customers of Reporting API to start to migrate to MetricsReport in
+      GraphQL API."
+    replacement: accountMetricsReport query on the GraphQL API
+    still_documented: true
+    still_documented_note: >-
+      The reference pages remain published nearly two years after the stated
+      sunset date, with no removal notice and no confirmation the endpoints
+      were switched off.
+  deprecated_sdks:
+  - name: Quantcast Measure for iOS
+    repository: https://github.com/quantcast/ios-measurement
+    statement: '[DEPRECATED] Quantcast no longer supports mobile in app measurement at this time.'
+  - name: Quantcast Measure for Android
+    repository: https://github.com/quantcast/android-measurement
+    statement: Quantcast Android SDK (Deprecated) — Quantcast no longer supports mobile in app measurement at this time.
+  - name: Quantcast Measure SDK for Roku
+    repository: https://github.com/quantcast/roku-measurement
+    statement: '[DEPRECATED] Quantcast no longer supports mobile in app measurement at this time.'
+  deprecated_fields:
+    source: https://developers.quantcast.com/docs/graphql-api/reference/objects/
+    note: >-
+      The CustomAudience object marks six fields [Deprecated] in the
+      published reference — prospectingEvents, retargetingEvents,
+      frequencyCap, includeCookielessTargeting, cookielessTargetingOnly and
+      related targeting flags — with in-line replacement guidance
+      (e.g. "Use ad set's frequency_cap instead").
+  divested_products:
+  - name: Quantcast Choice (Consent Management Platform)
+    event: acquired by InMobi
+    date: '2023-08'
+    source: https://www.quantcast.com/press-release/inmobi-acquires-quantcast-choice-to-enhance-frictionless-consent-management-for-publishers/
+    note: >-
+      The legacy choice-mobile-ios repository remains published under the
+      quantcast GitHub organisation but the product is operated by InMobi.
+beta_surface:
+  note: >-
+    Five GraphQL queries are labelled [Beta] in the published reference —
+    asyncMetricsReport, asyncMetricsReportDownloadURL,
+    asyncAttributedActionsReport, asyncAttributedActionsReportDownloadURL —
+    with no stability guarantee or graduation date published.
+  source: https://developers.quantcast.com/docs/graphql-api/reference/queries/
+sla:
+  url: null
+  uptime_target: null
+  note: >-
+    No public SLA or uptime commitment. Commercial terms are in the Measure
+    and Publisher Terms of Service at https://legal.quantcast.com/.
+status_page:
+  url: https://status.quantcast.com
+  provider: Atlassian Statuspage
+  components: [Quantcast Website, Help Center]
+  subscriptions: [email, sms]
+  verified: '2026-08-13'
+  http_status: 200
+changelog:
+  url: null
+  note: >-
+    No changelog, release notes or "what's new" page for either API. Searched
+    the developer portal navigation and all 419 pages indexed by
+    https://help.quantcast.com/llms.txt on 2026-08-13.
+support:
+  channels:
+  - https://help.quantcast.com
+  - designated Quantcast account team (named in the Reporting API guide)
+  note: >-
+    The docs ask callers to include the request_id from the failing response
+    when opening a support request.

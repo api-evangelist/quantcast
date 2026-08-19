@@ -1,0 +1,50 @@
+generated: '2026-08-13'
+method: searched
+source: https://developers.quantcast.com/docs/get-started/authentication/
+docs: https://developers.quantcast.com/docs/get-started/authentication/
+note: >-
+  Quantcast publishes no OpenAPI, so derive-oauth-scopes.py has nothing to
+  read. These scopes were taken verbatim from the token request the
+  authentication guide prints, and from the sample token response on the same
+  page which echoes back "scope": "read_reports api_access". Quantcast
+  publishes no separate scopes/permissions reference page; the two scopes
+  below are the complete published set. Fine-grained authorization on the
+  platform is expressed through Roles / AccountAction on the GraphQL Role
+  object, not through OAuth scopes.
+schemes:
+- name: QuantcastPlatformOAuth2
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://auth.quantcast.com/oauth2/default/v1/token
+    source: https://developers.quantcast.com/docs/get-started/authentication/
+scopes:
+- scope: api_access
+  description: >-
+    Grants the client credential access to the Quantcast Platform APIs. Sent
+    in the documented token request and echoed in the token response.
+  flows: [clientCredentials]
+  sources: [https://developers.quantcast.com/docs/get-started/authentication/]
+- scope: read_reports
+  description: >-
+    Grants read access to reporting data — the accountMetricsReport and
+    availableBreakdownsAndMetrics queries in the GraphQL API and the legacy
+    REST Reporting API report endpoint.
+  flows: [clientCredentials]
+  sources: [https://developers.quantcast.com/docs/get-started/authentication/]
+related:
+  okta_org_server_scopes:
+    source: well-known/quantcast-openid-configuration.json
+    scopes: [openid, email, profile, address, phone, offline_access, groups]
+    note: >-
+      These are the standard OIDC scopes advertised by the Okta org
+      authorization server at auth.quantcast.com. They govern platform user
+      sign-in, NOT the Quantcast Platform API. Recorded for completeness;
+      do not request them for API access.
+  permission_model:
+    note: >-
+      Effective API permissions follow the calling user. API credentials are
+      themselves platform users: an Owner has all permissions over every
+      account, while Members and Supply Managers must be assigned to
+      individual accounts through the Platform UI before the API will return
+      their resources.
+    source: https://developers.quantcast.com/docs/get-started/understanding-the-domain/

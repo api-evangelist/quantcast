@@ -1,0 +1,143 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  registry.npmjs.org, trunk.cocoapods.org, repo1.maven.org, rubygems.org,
+  github.com/quantcast, and help.quantcast.com
+note: >-
+  Exactly one first-party Quantcast client library is currently maintained —
+  the browser events SDK for the Conversion API. Every other published
+  package is a Measure-era mobile SDK that Quantcast has explicitly marked
+  DEPRECATED in its own README ("Quantcast no longer supports mobile in app
+  measurement at this time"), with last releases between 2015 and 2020.
+  There is NO client library of any kind for the Quantcast Platform GraphQL
+  API in any registry — the documented integration path is a raw HTTP POST
+  or the published Postman collection.
+packages:
+- language: javascript
+  registry: npm
+  name: '@quantcast-labs/events-sdk'
+  url: https://www.npmjs.com/package/@quantcast-labs/events-sdk
+  install: npm install @quantcast-labs/events-sdk
+  official: true
+  version: 0.1.4
+  published: '2025-10-06'
+  first_published: '2025-07-17'
+  license: SEE LICENSE IN LICENSE.txt
+  covers: Quantcast Conversion API (browser token acquisition)
+  status: active
+  note: >-
+    Named in the Quantcast help documentation for the Conversion API as the
+    supported way to invoke quantcast.token from the browser, which is what
+    establishes it as first-party. Still pre-1.0; five releases total.
+  source: https://help.quantcast.com/docs/tagging-with-the-quantcast-live-tag-using-the-conversion-api
+- language: swift-objc
+  registry: cocoapods
+  name: Quantcast-Measure
+  url: https://cocoapods.org/pods/Quantcast-Measure
+  install: pod 'Quantcast-Measure'
+  official: true
+  version: 1.7.1
+  published: '2020-05-04'
+  covers: Quantcast Measure for iOS
+  status: deprecated
+  note: >-
+    The GitHub README is titled "[DEPRECATED] Quantcast iOS SDK - Quantcast
+    no longer supports mobile in app measurement at this time." Repository
+    last pushed 2024-04-25; last CocoaPods release 2020-05-04.
+  repository: https://github.com/quantcast/ios-measurement
+- language: java
+  registry: maven
+  name: com.quantcast.android.measurement:QuantcastAndroidSdk
+  url: https://repo1.maven.org/maven2/com/quantcast/android/measurement/QuantcastAndroidSdk/
+  install: "implementation 'com.quantcast.android.measurement:QuantcastAndroidSdk:1.3.0'"
+  official: true
+  version: 1.3.0
+  published: '2015-08-18'
+  covers: Quantcast Measure for Android
+  status: deprecated
+  note: >-
+    Maven Central metadata lastUpdated 20150818. The README documents a
+    JCenter coordinate at version 1.5.1 that Maven Central never carried, and
+    JCenter itself has been sunset — so the only resolvable artifact is the
+    2015 Maven Central 1.3.0. README opens "Quantcast Android SDK
+    (Deprecated)".
+  repository: https://github.com/quantcast/android-measurement
+- language: ruby
+  registry: rubygems
+  name: qfs
+  url: https://rubygems.org/gems/qfs
+  install: gem install qfs
+  official: true
+  version: 0.0.13
+  published: '2016-12-19'
+  license: MIT
+  covers: Quantcast File System (QFS) client bindings — open-source infrastructure, not an API client
+  status: unmaintained
+  repository: https://github.com/quantcast/qfs-ruby
+- language: javascript
+  registry: cdn
+  name: quant.js (Quantcast Live Tag)
+  url: https://pixel.quantserve.com/quant.js
+  install: '<script type="text/javascript" async="true" src="https://pixel.quantserve.com/quant.js"></script>'
+  official: true
+  version: null
+  published: null
+  note: >-
+    The Live Tag is distributed only as an unpinned script tag from
+    pixel.quantserve.com — there is no registry entry and no version in the
+    URL, so a consumer cannot tell which build they are executing and neither
+    can we. Recorded as version null deliberately: checked, nothing to
+    record.
+  source: https://help.quantcast.com/docs/installing-live-tag
+- language: brightscript
+  registry: github
+  name: roku-measurement
+  url: https://github.com/quantcast/roku-measurement
+  official: true
+  version: null
+  published: null
+  status: deprecated
+  note: >-
+    Source-only distribution, no tagged releases and no registry. README
+    opens "[DEPRECATED] Quantcast Measure SDK for Roku". Last pushed
+    2024-04-25.
+- language: objective-c
+  registry: github
+  name: phonegap-measurement
+  url: https://github.com/quantcast/phonegap-measurement
+  official: true
+  version: null
+  published: null
+  status: abandoned
+  note: Cordova/PhoneGap Measure plugin; repository last pushed 2016-02-18.
+- language: smarty
+  registry: github
+  name: gtm-measure-sst
+  url: https://github.com/quantcast/gtm-measure-sst
+  official: true
+  version: null
+  published: null
+  status: active
+  note: >-
+    Google Tag Manager server-side tagging template for Quantcast Measure.
+    A tag template rather than a client library; distributed through the GTM
+    community gallery from this repository. Last pushed 2026-07-16.
+registries_checked:
+- registry: npm
+  result: 1 first-party package (@quantcast-labs/events-sdk); "quantcast" and "@quantcast/events-sdk" both 404
+- registry: pypi
+  result: no first-party package
+- registry: maven-central
+  result: only com/quantcast/android/measurement (2015)
+- registry: nuget
+  result: no first-party package
+- registry: rubygems
+  result: qfs 0.0.13 (infrastructure, not an API client)
+- registry: cocoapods
+  result: Quantcast-Measure 1.7.1 (deprecated)
+- registry: crates.io
+  result: no first-party package
+- registry: packagist
+  result: no first-party package
+- registry: pkg.go.dev
+  result: no first-party client; the quantcast org publishes Go forks (promise, g2, roaring), not API clients

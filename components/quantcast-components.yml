@@ -1,0 +1,79 @@
+generated: '2026-08-13'
+method: searched
+source: https://help.quantcast.com/docs/tagging-overview
+note: >-
+  Quantcast's client-side surface is a measurement tag rather than a UI
+  component library — there are no embeddable widgets, elements or hosted
+  dashboards. What it does ship is a browser script with a documented
+  JavaScript API, a non-JavaScript image-pixel fallback, a tag-manager
+  template family, and a browser SDK for token acquisition. Those are
+  catalogued here; the server-side packages live in
+  packages/quantcast-packages.yml.
+families:
+- name: Live Tag (Q Pixel)
+  kind: browser-script
+  loader: https://pixel.quantserve.com/quant.js
+  install: '<script type="text/javascript" async="true" src="https://pixel.quantserve.com/quant.js"></script>'
+  api:
+    global: window._qevents
+    method: '_qevents.push({...})'
+    parameters:
+    - {name: qacct, description: The Quantcast account id (pCode).}
+    - {name: event, description: 'Event type — e.g. PageView, refresh.'}
+    - {name: labels, description: Event labels used for reporting and targeting.}
+    - {name: orderid, description: Order identifier for conversion events.}
+    - {name: revenue, description: Revenue attributed to the conversion.}
+    - {name: token_callback, description: 'Callback receiving {token, expires} — the recommended way to acquire a browser token for the Conversion API.'}
+  variants:
+  - {name: Base Tag, docs: https://help.quantcast.com/docs/installing-live-tag}
+  - {name: Event Tag, docs: https://help.quantcast.com/docs/track-events}
+  - {name: Full Tag, docs: https://help.quantcast.com/docs/advanced-installation-full-tag}
+  - {name: Image Tag (non-JavaScript), docs: https://help.quantcast.com/docs/advanced-installation-image-pixels-non-javascript}
+  versioning: unpinned — the script URL carries no version
+  docs: https://help.quantcast.com/docs/tagging-overview
+- name: Events SDK
+  kind: browser-library
+  package: '@quantcast-labs/events-sdk'
+  registry: npm
+  version: 0.1.4
+  install: npm install @quantcast-labs/events-sdk
+  usage: |
+    import token from "@quantcast-labs/events-sdk";
+    token("<account-id>").then((t) => { /* t.token, t.expires */ });
+  purpose: Acquire a Quantcast browser token without loading the full Live Tag.
+  docs: https://help.quantcast.com/docs/tagging-with-the-quantcast-live-tag-using-the-conversion-api
+- name: Tag manager integrations
+  kind: tag-template
+  note: >-
+    Quantcast publishes per-platform installation templates rather than a
+    component API. The server-side GTM template is open source.
+  members:
+  - {name: Google Tag Manager, docs: https://help.quantcast.com/docs/implement-live-tag-with-google-tag-manager}
+  - {name: Google Tag Manager (server-side), repository: 'https://github.com/quantcast/gtm-measure-sst'}
+  - {name: Adobe Tag Manager, docs: https://help.quantcast.com/docs/implement-live-tag-in-adobe-tag-manager}
+  - {name: Tealium, docs: https://help.quantcast.com/docs/implement-live-tag-in-tealium}
+  - {name: Segment, docs: https://help.quantcast.com/docs/implement-live-tag-in-segment}
+  - {name: Ensighten, docs: https://help.quantcast.com/docs/implement-live-tag-in-ensighten}
+  - {name: Tag Commander, docs: https://help.quantcast.com/docs/implement-live-tag-in-tag-commander}
+  - {name: Campaign Manager 360, docs: https://help.quantcast.com/docs/implement-live-tag-in-campaign-manager-360-dcm}
+  - {name: Shopify, docs: https://help.quantcast.com/docs/implement-live-tag-in-shopify}
+  - {name: WordPress, docs: https://help.quantcast.com/docs/implement-live-tag-in-wordpress}
+  - {name: Wix, docs: https://help.quantcast.com/docs/implement-live-tag-in-wix}
+  - {name: Joomla, docs: https://help.quantcast.com/docs/implement-live-tag-in-joomla}
+  - {name: OpenCart, docs: https://help.quantcast.com/docs/implement-live-tag-in-opencart}
+  - {name: Qubit, docs: https://help.quantcast.com/docs/implement-live-tag-in-qubit}
+- name: Tag Inspector
+  kind: browser-extension
+  url: https://chrome.google.com/webstore/detail/quantcast-tag-inspector/ffjncjpkoanpjjmcdonkhfammlhfapll
+  purpose: >-
+    Verify a Quantcast tag is installed, firing, and triggering the expected
+    audience segment labels. This is Quantcast's only published testing tool —
+    there is no sandbox or test-mode account, which is why no sandbox/
+    artifact is recorded for this provider.
+  docs: https://help.quantcast.com/docs/inspect-your-tag
+- name: Mobile measurement SDKs
+  kind: mobile-sdk
+  status: deprecated
+  note: >-
+    iOS, Android, Roku and PhoneGap Measure SDKs are published but marked
+    deprecated by Quantcast; see packages/quantcast-packages.yml.

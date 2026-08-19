@@ -1,0 +1,106 @@
+generated: '2026-08-13'
+method: probed
+source: live GET of /.well-known/* on every apis.yml host
+note: >-
+  Two real documents were returned, both from auth.quantcast.com — the Okta
+  tenant that issues the OAuth 2.0 client-credentials tokens the Quantcast
+  Platform GraphQL API requires. No other Quantcast host serves a
+  /.well-known/ document: developers.quantcast.com returns HTTP 500 at the
+  site root and for every /.well-known/ path (only /docs/* is served),
+  www.quantcast.com returns its SPA 404 page, and pixel.quantserve.com
+  returns a plain 404. help.quantcast.com answered 200 for /openapi.yaml but
+  the body is the Document360 HTML shell, not a specification — recorded here
+  as a soft-200 miss, not a hit.
+hosts:
+- host: https://auth.quantcast.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: application/json
+    file: quantcast-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: application/json
+    file: quantcast-oauth-authorization-server.json
+  - path: /.well-known/security.txt
+    status: 405
+  - path: /.well-known/api-catalog
+    status: 405
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://developers.quantcast.com
+  note: every path under this host returns HTTP 500 except /docs/*
+  documents:
+  - path: /.well-known/security.txt
+    status: 500
+  - path: /.well-known/openid-configuration
+    status: 500
+  - path: /.well-known/oauth-authorization-server
+    status: 500
+  - path: /.well-known/api-catalog
+    status: 500
+  - path: /.well-known/ai-plugin.json
+    status: 500
+  - path: /.well-known/agent-card.json
+    status: 500
+  - path: /.well-known/agent.json
+    status: 500
+- host: https://www.quantcast.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://help.quantcast.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://pixel.quantserve.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+security_txt:
+  served: false
+  note: >-
+    No security.txt on any host. The only machine-readable security contact
+    Quantcast publishes is the CAA iodef record on quantcast.com —
+    mailto:netsec-notifications@quantcast.com — recorded in
+    security/quantcast-domain-security.yml.

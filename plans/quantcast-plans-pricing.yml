@@ -1,0 +1,32 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.quantcast.com/platform/
+plan_count: 0
+note: >-
+  Quantcast publishes no pricing page and no plan tiers. Probed 2026-08-13:
+  https://www.quantcast.com/pricing (404), /platform/pricing/ (404),
+  /pricing/ (404). The commercial path is the platform sign-up
+  (https://www.quantcast.com/signup/) and the contact form
+  (https://www.quantcast.com/contact-us/); commercial terms live in the
+  Measure and Publisher Terms of Service and the Buyer Terms at
+  https://legal.quantcast.com/. Media is bought on advertiser budget
+  (CPM/CPA/CPC/ROAS goals set per campaign in the platform), not on an API
+  or SaaS subscription tier, and the GraphQL API carries no separate list
+  price. Billing mechanics — Wallet, Payment Center, Pay-As-You-Go credit
+  card payments — are documented in the help centre but no rate card is
+  published.
+plans: []
+evidence:
+- url: https://www.quantcast.com/pricing
+  status: 404
+- url: https://www.quantcast.com/platform/pricing/
+  status: 404
+- url: https://legal.quantcast.com/
+  status: 200
+- url: https://help.quantcast.com/docs/payment-center
+  status: 200
+billing_docs:
+- https://help.quantcast.com/docs/payment-center
+- https://help.quantcast.com/docs/wallet
+- https://help.quantcast.com/docs/understanding-pay-as-you-go-payg-for-your-quantcast-platform-payments-1
+- https://help.quantcast.com/docs/faq-payments-credits

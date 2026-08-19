@@ -1,0 +1,425 @@
+# Quantcast Help
+
+> Knowledge base documentation for Quantcast Help.
+
+## v1
+
+- [Marketers](https://help.quantcast.com/docs/marketers.md)
+- [Getting Started](https://help.quantcast.com/docs/getting-started.md)
+- [Welcome to Quantcast](https://help.quantcast.com/docs/welcome-to-quantcast.md): Log in to the Quantcast Platform, set up your account, and launch your first campaign within 30 days. Explore features and personalize your experience!
+- [Countries Available in the Quantcast Platform](https://help.quantcast.com/docs/countries-available-in-the-quantcast-platform.md)
+- [How to Use Quantcast Help](https://help.quantcast.com/docs/how-to-use-quantcast-help.md): Get answers to your Quantcast questions with our comprehensive help center, featuring articles, FAQs, and a conversational search for quick assistance.
+- [Account Overview Dashboard](https://help.quantcast.com/docs/account-overview-dashboard.md)
+- [Tagging with the Quantcast Live Tag](https://help.quantcast.com/docs/live-tag-tagging.md)
+- [Live Tag Overview](https://help.quantcast.com/docs/tagging-overview.md): Track website events effortlessly with Quantcast Live Tag. Install, manage conversions, and analyze site activity for better audience insights.
+- [Installing Live Tag](https://help.quantcast.com/docs/installing-live-tag.md): Install the Quantcast Live Tag on your website to track audience insights and campaign performance with ease using the Base and Event Tags.
+- [Advanced Installation: Full Tag](https://help.quantcast.com/docs/advanced-installation-full-tag.md): Learn how to install the Full Tag code snippet for effective event tracking on your website, enhancing data collection and traffic identification.
+- [Advanced Installation: Image Tag (non-JavaScript)](https://help.quantcast.com/docs/advanced-installation-image-pixels-non-javascript.md)
+- [Example Live Tag Implementations](https://help.quantcast.com/docs/example-live-tag-implementations.md): Learn how to implement Live Tags on your website, including Base Tags and Event Tags, to effectively track site traffic and user interactions.
+- [Inspect Your Tag](https://help.quantcast.com/docs/inspect-your-tag.md): Check if your Quantcast tag is installed and functioning correctly with our Tag Inspector tool. Troubleshoot audience segment collection easily!
+- [Creating URL Based Events](https://help.quantcast.com/docs/creating-rule-based-events.md): Track key user actions with URL-Based Events. Learn to set conditions and create effective Rule Events for better audience insights and conversions.
+- [Track Events](https://help.quantcast.com/docs/track-events.md): Track key user actions with Event Tags for insights and targeting. Learn about Rule-Based and Data Pass-back Events to enhance your marketing strategy.
+- [Data Passback](https://help.quantcast.com/docs/data-passback.md)
+- [Fixing Duplicate Order IDs](https://help.quantcast.com/docs/fix-duplicate-order-ids.md)
+- [Conversion API](https://help.quantcast.com/docs/tagging-with-the-quantcast-live-tag-using-the-conversion-api.md): Integrate the Conversion API for accurate offline conversions, utilizing Browser Tokens and consent management for compliance and enhanced performance tracking.
+- [Third-Party Tagging](https://help.quantcast.com/docs/third-party-tagging.md)
+- [Implement Live Tag with Google Tag Manager Manually](https://help.quantcast.com/docs/implement-live-tag-with-google-tag-manager-manually.md): Integrate Quantcast with Google Tag Manager effortlessly. Set up Live Tags, Event Tags, and Data Passback for effective tracking and analytics.
+- [Implement Live Tag in Adobe Tag Manager](https://help.quantcast.com/docs/implement-live-tag-in-adobe-tag-manager.md): Learn how to implement the Quantcast Live Tag in Adobe Tag Manager for effective tagging and audience insights. Optimize your campaigns today!
+- [Implement Live Tag in Campaign Manager 360 (DCM)](https://help.quantcast.com/docs/implement-live-tag-in-campaign-manager-360-dcm.md): Implement a successful tagging strategy with Quantcast Live Tag in Campaign Manager 360 (CM360) for enhanced audience insights and campaign performance.
+- [Implement Live Tag in Ensighten](https://help.quantcast.com/docs/implement-live-tag-in-ensighten.md): Learn how to implement the Quantcast Live Tag in Ensighten for effective tagging and audience insights to boost your campaign's success.
+- [Implement the Quantcast Live Tag with Google Tag Manager Imports](https://help.quantcast.com/docs/implement-live-tag-with-google-tag-manager.md): Integrate Quantcast with Google Tag Manager effortlessly. Follow our guide to install your Live Tag and optimize your website's tracking today!
+- [Implement Live Tag in Joomla](https://help.quantcast.com/docs/implement-live-tag-in-joomla.md): Implement a successful tagging strategy in Joomla with Quantcast Live Tag for robust audience insights and data collection. Follow our step-by-step guide!
+- [Implement Live Tag in Opencart](https://help.quantcast.com/docs/implement-live-tag-in-opencart.md): Implement a comprehensive tagging strategy in Opencart with Quantcast Live Tag for advanced conversion tracking and audience insights.
+- [Implement Live Tag in Qubit](https://help.quantcast.com/docs/implement-live-tag-in-qubit.md)
+- [Implement Live Tag in Segment](https://help.quantcast.com/docs/implement-live-tag-in-segment.md): Set up Quantcast Live Tags in Segment for effective audience insights and campaign optimization. Verify implementation with the Quantcast Tag Inspector.
+- [Implement Live Tag in Shopify](https://help.quantcast.com/docs/implement-live-tag-in-shopify.md): Learn how to implement the Quantcast Live Tag on your Shopify store and verify it with the Tag Inspector for accurate audience data collection.
+- [Implement Live Tag in Tag Commander](https://help.quantcast.com/docs/implement-live-tag-in-tag-commander.md): Implement a successful tagging strategy with Quantcast Live Tag in Tag Commander for robust audience insights and effective campaign tracking.
+- [Implement Live Tag in Tealium](https://help.quantcast.com/docs/implement-live-tag-in-tealium.md): Implement a successful tagging strategy with Quantcast Live in Tealium for robust audience insights and optimized campaign performance.
+- [Implement Live Tag in Ticketmaster](https://help.quantcast.com/docs/implement-live-tag-in-ticketmaster.md): Implement a successful tagging strategy with Quantcast Live Tag in Ticketmaster for robust audience insights and optimal campaign performance.
+- [Implement Live Tag in Wix](https://help.quantcast.com/docs/implement-live-tag-in-wix.md): Implement the Quantcast Live Tag on Wix for effective tagging strategies and audience insights. Follow our guide for both free and premium accounts.
+- [Implement Live Tag in WordPress](https://help.quantcast.com/docs/implement-live-tag-in-wordpress.md): Implement a successful tagging strategy in WordPress with the Quantcast Live Tag for robust audience insights and data collection.
+- [Campaign Category Policies](https://help.quantcast.com/docs/campaign-category-policies.md)
+- [Sensitive IAB Category Account and Campaign Reviews](https://help.quantcast.com/docs/sensitive-iab-category-account-and-campaign-reviews.md): Manage IAB categories for optimal ad delivery on Quantcast. Learn about prohibited and restricted categories, account setup, and compliance processes.
+- [Australia](https://help.quantcast.com/docs/australia.md)
+- [Australia Alcohol Campaign Category Policy](https://help.quantcast.com/docs/australia-alcohol-campaign-category-policy.md)
+- [Australia CBD Campaign Category Policy](https://help.quantcast.com/docs/australia-cbd-campaign-category-policy.md)
+- [Australia Charitable Organisation Campaign Category Policy](https://help.quantcast.com/docs/australia-charitable-organisation-campaign-category-policy.md)
+- [Australia Employment Campaign Category Policy](https://help.quantcast.com/docs/australia-employment-campaign-category-policy.md)
+- [Australia Financial Services Campaign Category Policy](https://help.quantcast.com/docs/australia-financial-services-campaign-category-policy.md)
+- [Australia Gambling Campaign Category Policy](https://help.quantcast.com/docs/australia-gambling-campaign-category-policy.md)
+- [Australia Healthcare Campaign Category Policy](https://help.quantcast.com/docs/australia-healthcare-campaign-category-policy.md)
+- [Australia Housing Campaign Category Policy](https://help.quantcast.com/docs/australia-housing-campaign-category-policy.md): Explore Quantcast's Housing campaign guidelines in Australia, covering supported, restricted, and prohibited advertising practices for real estate.
+- [Canada](https://help.quantcast.com/docs/canada.md)
+- [Canada Alcohol Campaign Category Policy](https://help.quantcast.com/docs/canada-alcohol-campaign-category-policy.md)
+- [Canada CBD Campaign Category Policy](https://help.quantcast.com/docs/canada-cbd-campaign-category-policy.md)
+- [Canada Charitable / Nonprofit Campaign Category Policy](https://help.quantcast.com/docs/canada-charitable-nonprofit-campaign-category-policy.md)
+- [Canada Employment Campaign Category Policy](https://help.quantcast.com/docs/canada-employment-campaign-category-policy.md)
+- [Canada Financial Services Campaign Category Policy](https://help.quantcast.com/docs/canada-financial-services-campaign-category-policy.md)
+- [Canada Gambling Campaign Category Policy](https://help.quantcast.com/docs/canada-gambling-campaign-category-policy.md)
+- [Canada Healthcare Campaign Category Policy](https://help.quantcast.com/docs/canada-healthcare-campaign-category-policy.md)
+- [Canada Housing Campaign Category Policy](https://help.quantcast.com/docs/canada-housing-campaign-category-policy.md)
+- [Europe](https://help.quantcast.com/docs/europe.md)
+- [Europe Alcohol Campaign Category Policy](https://help.quantcast.com/docs/europe-alcohol-campaign-category-policy.md)
+- [Europe CBD Campaign Category Policy](https://help.quantcast.com/docs/europe-cbd-campaign-category-policy.md)
+- [Europe Charitable / Nonprofit Campaigns Category Policy](https://help.quantcast.com/docs/europe-charitable-nonprofit-campaigns-category-policy.md)
+- [Europe Employment Campaign Category Policy](https://help.quantcast.com/docs/europe-employment-campaign-category-policy.md)
+- [Europe Financial Services Campaign Category Policy](https://help.quantcast.com/docs/europe-financial-services-campaign-category-policy.md)
+- [Europe Gambling Campaign Category Policy](https://help.quantcast.com/docs/europe-gambling-campaign-category-policy.md)
+- [Europe Healthcare Campaign Category Policy](https://help.quantcast.com/docs/europe-healthcare-campaign-category-policy.md)
+- [Europe Housing Campaign Category Policy](https://help.quantcast.com/docs/europe-housing-campaign-category-policy.md)
+- [United States of America](https://help.quantcast.com/docs/united-states-of-america-1.md)
+- [US Alcohol Campaign Category Policy](https://help.quantcast.com/docs/us-alcohol-campaign-category-policy.md)
+- [US CBD Campaign Category Policy](https://help.quantcast.com/docs/us-cbd-campaign-category-policy.md)
+- [US Charitable / Nonprofit Organization Campaign Policy](https://help.quantcast.com/docs/us-charitable-nonprofit-organization-campaign-policy.md)
+- [US Employment Campaign Category Policy](https://help.quantcast.com/docs/us-employment-campaign-category-policy.md)
+- [US Financial Campaign Category Policy Guide](https://help.quantcast.com/docs/us-financial-campaign-category-policy-guide.md)
+- [US Gambling Campaign Category Policy](https://help.quantcast.com/docs/us-gambling-campaign-category-policy.md)
+- [US Healthcare Campaign Category Policy](https://help.quantcast.com/docs/us-healthcare-campaign-category-policy.md)
+- [US Housing Campaign Category Policy](https://help.quantcast.com/docs/us-housing-campaign-category-policy.md)
+- [Agent Q](https://help.quantcast.com/docs/agent-q.md): Agent Q is your AI assistant for instant answers, effortless tagging management, and performance insights, boosting your productivity on the Quantcast platform.
+- [Creating Campaigns in the Quantcast Platform](https://help.quantcast.com/docs/campaign-set-up.md)
+- [About Campaigns in Quantcast Platform](https://help.quantcast.com/docs/about-campaigns-in-quantcast-platform.md): Manage your campaigns effortlessly with Quantcast's Campaigns screen, offering insights, performance metrics, and intuitive creation for optimized advertising.
+- [Campaign Objectives](https://help.quantcast.com/docs/campaign-objectives.md): Explore the significance of Campaign Objectives in digital marketing. Learn how they guide strategies and maximize advertising effectiveness.
+- [Reach Campaign Objective](https://help.quantcast.com/docs/understanding-reach-campaigns-in-quantcast-platform.md): Learn about Reach Campaigns in the Quantcast platform, including how to create them and monitor performance to maximize advertising awareness.
+- [Consideration Click Campaign Objective](https://help.quantcast.com/docs/consideration-click-campaign-objective.md)
+- [Conversion & Traffic Campaign Objective](https://help.quantcast.com/docs/conversion-objective.md): Discover the key differences between Conversion Campaigns and Traffic Campaigns, their objectives, and strategies to maximize digital marketing efforts.
+- [Video Views Campaign Objective](https://help.quantcast.com/docs/understanding-video-views-campaigns-on-quantcast.md): Discover how to create and optimize Video Views campaigns on Quantcast. Maximize brand engagement and awareness through effective video advertising.
+- [How to Choose the Right Campaign Type for Your Goals](https://help.quantcast.com/docs/how-to-choose-the-right-campaign-type-for-your-goals.md)
+- [Site Engagement Campaign Objective](https://help.quantcast.com/docs/understanding-site-engagement-campaign-objectives.md): Discover what Site Engagement Campaign Objectives are, when to use them, and key considerations for implementing successful campaigns to boost user interaction.
+- [Traditional Campaign Builder](https://help.quantcast.com/docs/traditional-campaign-builder.md)
+- [Campaign Hierarchy](https://help.quantcast.com/docs/campaign-hierarchy.md)
+- [Q+ Campaign Builder](https://help.quantcast.com/docs/q-plus-campaign-builder.md): Create campaigns in minutes with Quantcast's AI-driven process. Choose between AI or traditional workflows for effective ad management.
+- [Q+ Campaign Insights](https://help.quantcast.com/docs/q-plus-campaign-insights.md): Gain insights into your Q+ campaigns with AI analysis, key performance metrics, and creative performance to optimize conversions effectively.
+- [Understanding the Performance Mix Insight](https://help.quantcast.com/docs/understanding-the-performance-mix-insight.md)
+- [Q+ FAQs](https://help.quantcast.com/docs/q-plus-faqs.md): Unlock the power of Q+ Campaigns—an AI-driven solution for unified, goal-based advertising across Display, Video, CTV, and Native formats.
+- [Creating a New Campaign](https://help.quantcast.com/docs/new-campaign-creation.md): Learn how to create effective campaigns on the Quantcast Platform, from setting objectives to budget allocation for optimal performance.
+- [Ad Set Builder](https://help.quantcast.com/docs/ad-set-set-up.md)
+- [Creating a New Ad Set](https://help.quantcast.com/docs/new-ad-set-creation.md)
+- [Budget and Schedule](https://help.quantcast.com/docs/budget-and-schedule.md): Set your ad budget and schedule with options for daily budgets, flights, pacing, and bidding to optimize your campaign effectively.
+- [Targeting](https://help.quantcast.com/docs/targeting.md)
+- [Audience](https://help.quantcast.com/docs/audience.md): Choose between Quantcast Audience Agent or Classic configuration to optimize audience targeting for conversions and maximize campaign performance.
+- [Inventory](https://help.quantcast.com/docs/inventory-3.md)
+- [Creatives](https://help.quantcast.com/docs/creatives-1.md)
+- [Publish](https://help.quantcast.com/docs/publish.md)
+- [Targeting Media Packages](https://help.quantcast.com/docs/targeting-media-and-packages.md): Target your campaign effectively with Quantcast's curated media packages, including Display and CTV options, for optimal performance and inventory quality.
+- [Creative Grade by Q](https://help.quantcast.com/docs/creative-grade-by-q.md): Optimize your ad creatives with Creative Grade by Q, a tool that evaluates effectiveness and provides actionable insights for better campaign performance.
+- [Quantcast Challenge](https://help.quantcast.com/docs/quantcast-challenge.md)
+- [Enabling Frequency Cap](https://help.quantcast.com/docs/enabling-frequency-cap.md): Optimize ad frequency to enhance efficiency and prevent brand fatigue. Learn to set frequency caps for better campaign performance with Quantcast AI.
+- [Enabling IP Suppression](https://help.quantcast.com/docs/enable-ip-suppression.md)
+- [Enabling Click Boost](https://help.quantcast.com/docs/enabling-click-boost.md)
+- [Using Endemic Audiences](https://help.quantcast.com/docs/using-endemic-audiences.md)
+- [IAS Languages](https://help.quantcast.com/docs/ias-languages.md)
+- [Changing the Recency Window](https://help.quantcast.com/docs/changing-the-recency-window.md)
+- [Ad Set Forecasting](https://help.quantcast.com/docs/ad-set-forecasting.md)
+- [Cloning an Ad Set](https://help.quantcast.com/docs/clone-an-ad-set.md)
+- [Activating and Measuring Cookieless Ad Sets](https://help.quantcast.com/docs/cookieless-activation-and-measurement.md)
+- [Custom Pacing](https://help.quantcast.com/docs/custom-pacing.md): Update your ad set's pacing with custom daily delivery amounts using lifetime budgets. Manage upweights, downweights, and view schedules easily.
+- [Green Advertising with Quantcast](https://help.quantcast.com/docs/green-advertising-with-quantcast.md)
+- [Audio](https://help.quantcast.com/docs/audio-3.md)
+- [Audio Overview](https://help.quantcast.com/docs/audio-overview.md)
+- [Adding Audio to your campaign](https://help.quantcast.com/docs/adding-audio-to-your-campaign.md)
+- [Brand Lift Live](https://help.quantcast.com/docs/brand-lift-live.md)
+- [Brand Lift Live Overview](https://help.quantcast.com/docs/brand-lift-live-overview.md): Explore Brand Lift Live templates in multiple languages and locations, measuring ad impact on brand perception through effective survey methodologies.
+- [Brand Lift Live Survey Set-Up](https://help.quantcast.com/docs/brand-lift-live-survey-set-up.md)
+- [Connected TV (CTV)](https://help.quantcast.com/docs/connected-tv-ctv.md)
+- [CTV Overview](https://help.quantcast.com/docs/ctv-overview.md)
+- [Adding CTV to Your Campaign](https://help.quantcast.com/docs/adding-ctv-to-your-campaign.md)
+- [Utilizing ACR Data for your CTV Strategy](https://help.quantcast.com/docs/utilizing-acr-data-for-your-ctv-strategy.md)
+- [Assets](https://help.quantcast.com/docs/assets.md)
+- [Creatives](https://help.quantcast.com/docs/creatives.md)
+- [Creative Specifications - Audio](https://help.quantcast.com/docs/creative-specifications-audio.md)
+- [Creative Specifications (Display)](https://help.quantcast.com/docs/creative-specifications-display.md)
+- [Creative Specifications (CTV)](https://help.quantcast.com/docs/creative-specifications-ctv.md)
+- [Creative Specifications (Video)](https://help.quantcast.com/docs/creative-specifications-video.md): Upload video assets to the Quantcast Platform with VAST tags, ensuring compliance with content standards for optimal ad performance.
+- [Creative Specifications (Native)](https://help.quantcast.com/docs/creative-specifications-native.md): Learn the essential specifications for native creatives on the Quantcast Platform and troubleshoot common errors for optimal performance.
+- [Uploading Creatives](https://help.quantcast.com/docs/uploading-creatives.md): Learn how to upload and edit creatives in your Creative Library, including media types, UTM codes, and ad set assignments for effective campaigns.
+- [Editing or Archiving Creatives](https://help.quantcast.com/docs/editing-or-archiving-creatives.md): Edit creatives easily with single or bulk options, archive ads, and manage tracking pixels in your Creative Library. Optimize your campaigns today!
+- [Scheduling Creatives](https://help.quantcast.com/docs/scheduling-creatives.md)
+- [Skin Creatives](https://help.quantcast.com/docs/skin-creatives.md): Elevate your brand with Skin Creatives on the Quantcast Platform—highly visible, engaging ads that enhance your campaigns and reach targeted audiences.
+- [Creative Macros](https://help.quantcast.com/docs/creative-macros.md)
+- [Accepted Third-Party Tags](https://help.quantcast.com/docs/accepted-third-party-tags.md)
+- [Adding Third-Party Impression Pixels to Creative](https://help.quantcast.com/docs/adding-third-party-impression-pixels-to-creative.md)
+- [Video and Native Creative Placement](https://help.quantcast.com/docs/video-and-native-creative-placement.md)
+- [Inventory](https://help.quantcast.com/docs/inventory-1.md)
+- [Contextual Block Lists](https://help.quantcast.com/docs/keyword-block-lists.md)
+- [Creating App and Domain Lists](https://help.quantcast.com/docs/app-and-domain-lists.md)
+- [Adding Pre-Bid Double Verify Segments in Inventory Manager](https://help.quantcast.com/docs/adding-pre-bid-ias-segments-in-inventory-manager.md): Maximize brand safety and ad spend efficiency with IAS pre-bid segments, defining risk tolerance and preventing ads from unsuitable content.
+- [Adding Pre-Bid IAS Segments in Inventory](https://help.quantcast.com/docs/adding-pre-bid-ias-segments-in-inventory.md)
+- [Editing a Campaign](https://help.quantcast.com/docs/edit-a-campaign.md)
+- [Bulk Creating or Editing Campaigns](https://help.quantcast.com/docs/bulk-edit-or-create-campaigns.md): Streamline your campaign management with Quantcast's Bulk Upload feature, allowing easy offline editing and creation of multiple campaigns simultaneously.
+- [Bulk Pacing](https://help.quantcast.com/docs/bulk-pacing.md)
+- [Creating an Experiment](https://help.quantcast.com/docs/create-an-experiment.md): Set up A/B tests with Campaign Experiments to optimize audience targeting, creatives, and more for better ad performance and insights.
+- [Cloning a Campaign](https://help.quantcast.com/docs/clone-a-campaign.md)
+- [Turning on Campaign Budget Optimization](https://help.quantcast.com/docs/turn-on-campaign-budget-optimization.md)
+- [Mid-Campaign Forecasting](https://help.quantcast.com/docs/mid-campaign-forecasting.md)
+- [Archiving a Campaign](https://help.quantcast.com/docs/archive-your-campaign.md)
+- [Audience Planning](https://help.quantcast.com/docs/planning-your-audience.md)
+- [About Audiences in the Quantcast Platform](https://help.quantcast.com/docs/about-audiences-in-the-quantcast-platform.md)
+- [Understanding Index and Composition](https://help.quantcast.com/docs/understanding-index-and-composition.md): Gain insights and target ads with the Quantcast Platform using Index and Composition metrics to build effective audience profiles and media plans.
+- [Audience Building](https://help.quantcast.com/docs/audience-building.md)
+- [Build an Audience to Target](https://help.quantcast.com/docs/audience-builder.md): Build and save targeted audiences with Quantcast's Audience Builder, using filters for demographics, location, and interests across multiple channels.
+- [Understanding Audience Insights](https://help.quantcast.com/docs/audience-insights.md): Build and customize audiences with Quantcast's platform using demographic, geographic filters, and insights to enhance your targeting strategies.
+- [Campaign Audiences](https://help.quantcast.com/docs/campaign-audiences.md): Analyze your Campaign Audiences with Quantcast to refine future ads, uncover new opportunities, and understand who you've already reached.
+- [Comparing Audiences](https://help.quantcast.com/docs/comparing-audiences.md): Compare your saved audiences in Quantcast Platform to uncover key similarities and differences, enhancing your marketing insights and strategies.
+- [Client First-Party Data Onboarding Options](https://help.quantcast.com/docs/dmp-audiences.md): Upload and activate first-party audience segments in Quantcast using top DMPs and CDPs for targeted campaigns and insights.
+- [Sharing DMP Audiences via Adobe Audience Manager](https://help.quantcast.com/docs/sharing-dmp-audiences-via-adobe-audience-manager.md)
+- [Sharing DMP Audiences via LiveRamp](https://help.quantcast.com/docs/sharing-dmp-audiences-via-liveramp.md): Integrate your first-party data with Quantcast via LiveRamp for seamless audience targeting without extra fees. Activate your p-code today!
+- [LiveRamp Partner Program](https://help.quantcast.com/docs/liveramp-partner-program.md): Unlock enhanced campaign optimization with Quantcast and LiveRamp by onboarding your first-party data for targeted advertising in select countries.
+- [LiveRamp Match Rates](https://help.quantcast.com/docs/liveramp-match-rate.md)
+- [Onboarding CDP Segments with Tealium](https://help.quantcast.com/docs/onboarding-cdp-segments-with-tealium.md): Integrate CDP segments with Quantcast and Tealium to enhance your ad targeting. Follow our guide for seamless setup and audience connection.
+- [Uploading CRM Emails Directly to Quantcast](https://help.quantcast.com/docs/customer-audiences.md): Upload your CRM email lists to Quantcast for audience matching. Enjoy waived fees and secure data handling with our easy onboarding process.
+- [Audience Explorer](https://help.quantcast.com/docs/audience-explorer.md): Find your ideal audience with Audience Explorer, featuring pre-made segments, transparent pricing, and easy navigation for effective campaign targeting.
+- [Third-Party Audience Targeting](https://help.quantcast.com/docs/third-party-targeting.md)
+- [Third-Party Targeting: Off-The-Shelf Third-Party Audiences](https://help.quantcast.com/docs/using-third-party-audiences.md)
+- [Third-Party Targeting: Custom Third-Party Audiences](https://help.quantcast.com/docs/ingesting-custom-third-party-audiences.md): Leverage LiveRamp’s Data Marketplace with Quantcast to target custom third-party audience segments effectively for your U.S. campaigns.
+- [Enabling Interest Based Audiences](https://help.quantcast.com/docs/enabling-interest-based-audiences.md): Tailor your brand messaging with interest-based audiences using AI-driven insights to enhance engagement and reach your target customers effectively.
+- [Smart URL Audiences](https://help.quantcast.com/docs/smart-url-audiences.md)
+- [Assess Performance](https://help.quantcast.com/docs/assess-performance.md)
+- [Understanding Personas](https://help.quantcast.com/docs/understanding-audience-personas.md)
+- [Reporting Overview](https://help.quantcast.com/docs/reporting-overview.md)
+- [Analysis by Q](https://help.quantcast.com/docs/analysis-by-q.md)
+- [Understanding Cookieless Measurement](https://help.quantcast.com/docs/understanding-cookieless-measurement.md)
+- [Data Rentention](https://help.quantcast.com/docs/data-rentention.md)
+- [Invalid Traffic (IVT)](https://help.quantcast.com/docs/invalid-traffic-ivt.md)
+- [Reporting: Reach and Frequency](https://help.quantcast.com/docs/reporting-reach-and-frequency.md): Understand reach and frequency measurement for ads, including device and household metrics, to optimize your omnichannel campaigns effectively.
+- [Reporting: Organization Level](https://help.quantcast.com/docs/reporting-organizational-level.md)
+- [Verified by Q](https://help.quantcast.com/docs/verified-by-q.md): Monitor Quantcast campaign effectiveness in Google Analytics with Verified by Q, enhancing session attribution and view-through conversions.
+- [Custom Reports with Report Builder](https://help.quantcast.com/docs/custom-reports.md)
+- [Metrics Available in Report Builder](https://help.quantcast.com/docs/metrics-available-in-report-builder.md)
+- [Building a Custom Report](https://help.quantcast.com/docs/building-a-custom-report.md): Create custom reports using Report Builder by selecting metrics, breakdowns, and filters. Save, schedule, or download your reports easily.
+- [Scheduling a Custom Report](https://help.quantcast.com/docs/scheduling-a-custom-report.md)
+- [Deleting a Custom Report](https://help.quantcast.com/docs/deleting-a-custom-report.md)
+- [Creating a Result Details Report](https://help.quantcast.com/docs/creating-a-result-details-report.md)
+- [Insights Lab](https://help.quantcast.com/docs/insights-lab.md)
+- [Understanding Campaign and Ad Set Insights](https://help.quantcast.com/docs/understanding-campaign-and-ad-set-insights.md)
+- [Insight: Audience Overlap](https://help.quantcast.com/docs/insight-audience-overlap.md)
+- [Insight: Cookieless Breakdown](https://help.quantcast.com/docs/insight-cookieless-breakdown.md)
+- [Insight: Device Breakdown](https://help.quantcast.com/docs/insight-device-breakdown.md)
+- [Insight: First Impression to Conversion](https://help.quantcast.com/docs/insight-first-impression-to-conversion.md)
+- [Insight: First Impression to Site Visit](https://help.quantcast.com/docs/insight-first-impression-to-site-visit.md)
+- [Insight: Frequency Distribution](https://help.quantcast.com/docs/insights-frequency-distribution.md)
+- [Insight: Funnel Impact Insight](https://help.quantcast.com/docs/funnel-impact-insights.md)
+- [Insight: Funnel Visualizer](https://help.quantcast.com/docs/insight-funnel-visualizer.md)
+- [Insight: Last Impression to Conversion](https://help.quantcast.com/docs/last-impression-to-conversion.md)
+- [Insight: Media Mix Performance](https://help.quantcast.com/docs/insight-media-mix-performance.md)
+- [Insight: Page Depth](https://help.quantcast.com/docs/insight-page-depth.md)
+- [Insight: Performance Heatmap](https://help.quantcast.com/docs/insight-performance-heatmap.md)
+- [Insight: Performance Lift](https://help.quantcast.com/docs/performance-lift-insight.md)
+- [Insight: Prospecting / Retargeting Breakdown](https://help.quantcast.com/docs/insight-prospecting-retargeting-breakdown.md)
+- [Insight: Site Activity Contributions](https://help.quantcast.com/docs/insight-site-activity-contributions.md)
+- [Insight: Site Conversions Report](https://help.quantcast.com/docs/insight-site-conversions-report.md)
+- [Insight: Site Visit for CTV](https://help.quantcast.com/docs/insight-site-visit-for-ctv.md)
+- [Insight: Spend Versus Conversions By Hour](https://help.quantcast.com/docs/insight-spend-versus-conversions-by-hour.md)
+- [Insights: Supply Funnel Breakdown](https://help.quantcast.com/docs/insights-supply-funnel-breakdown.md): Unbundle inventory usage with the Supply Funnel Breakdown report to optimize your Ad Set's performance and identify key dropoff reasons.
+- [Insight: Video Completion Engagement](https://help.quantcast.com/docs/insight-video-completion-engagement.md): Maximize your video ad campaigns with insights from the Video Completion Engagement report, tracking user engagement and performance effectively.
+- [Insight: Weekly Conversion Change Summary](https://help.quantcast.com/docs/insight-weekly-conversion-change-summary.md)
+- [Third- Party Reporting](https://help.quantcast.com/docs/third-party-reporting.md)
+- [E-mail Reporting Requirements for Adform Reports](https://help.quantcast.com/docs/e-mail-reporting-requirements-for-adform-reports.md): Learn the essential Adform report ingestion requirements, including mandatory fields, metrics, and formatting for seamless data integration.
+- [E-Mail Reporting Requirements for DoubleClick Campaign Manager](https://help.quantcast.com/docs/e-mail-reporting-requirements-for-doubleclick-campaign-manager.md): Set up daily e-mailed reports for Quantcast with mandatory fields and metrics to optimize campaign performance and monitor delivery effectively.
+- [E-Mail Reporting Requirements for Flashtalking Campaign Manager](https://help.quantcast.com/docs/e-mail-reporting-requirements-for-flashtalking-campaign-manager.md)
+- [E-mail Reporting Requirements for Simzek Reports](https://help.quantcast.com/docs/e-mail-reporting-requirements-for-simzek-reports.md)
+- [Grant API Access to DoubleClick Campaign Manager (DCM) - English Version](https://help.quantcast.com/docs/grant-api-access-to-doubleclick-campaign-manager-dcm-english-version.md)
+- [Grant API Access to DoubleClick Campaign Manager (DCM) - French Version](https://help.quantcast.com/docs/grant-api-access-to-doubleclick-campaign-manager-dcm-french-version.md)
+- [Grant API Access to DoubleClick Campaign Manager (DCM) - Italian Version](https://help.quantcast.com/docs/grant-api-access-to-doubleclick-campaign-manager-dcm-italian-version.md)
+- [Glossaries, Best Practices, and FAQs](https://help.quantcast.com/docs/glossary-and-faqs.md)
+- [Best Practices](https://help.quantcast.com/docs/best-practices.md)
+- [Best Practices: Audience Forecasting and Audience Sizes](https://help.quantcast.com/docs/best-practices-audience-forecasting-and-audience-sizes.md): Explore Quantcast's Audience Forecasting tools, pixel activity, and insights to optimize your advertising campaigns and understand audience sizes effectively.
+- [Best Practices: Brand Lift Live](https://help.quantcast.com/docs/best-practices-brand-lift-live.md): Optimize your branding campaign with effective survey setups, creative alignment, and strategic ad placements for maximum brand lift and awareness.
+- [Best Practices: Brand Survey Results](https://help.quantcast.com/docs/best-practices-brand-survey-results.md)
+- [Best Practices: Campaign Budget Optimization](https://help.quantcast.com/docs/best-practices-campaign-budget-optimization.md): Optimize your campaigns with Quantcast's Campaign Budget Optimization, reducing manual effort and maximizing performance across multiple ad sets.
+- [Best Practices: CPM](https://help.quantcast.com/docs/best-practices-cpm.md)
+- [Best Practices: Creating Appealing Ads](https://help.quantcast.com/docs/best-practices-creating-appealing-ads.md)
+- [Best Practices: Creatives](https://help.quantcast.com/docs/creative-best-practices.md): Optimize your ads with creative best practices: clear value propositions, strong calls to action, and engaging imagery for better user experience.
+- [Best Practices: Creative Rejections](https://help.quantcast.com/docs/best-practices-creative-rejections.md): Ensure your ad creatives meet inventory guidelines to avoid rejection and optimize campaign performance across platforms like Google and Xandr.
+- [Best Practices: Creatives Testing](https://help.quantcast.com/docs/best-practices-1.md)
+- [Best Practices: Driving Ticket Sales](https://help.quantcast.com/docs/best-practices-driving-ticket-sales.md): Drive five times greater ticket sales with Quantcast and Ticketmaster!
+- [Best Practices: Media Mix Performance Insight](https://help.quantcast.com/docs/best-practices-media-mix-performance-insight.md)
+- [Best Practices: Mobile Advertising](https://help.quantcast.com/docs/best-practices-mobile-advertising.md): Optimize your mobile advertising strategy with best practices for targeting, engagement, and performance to effectively reach your audience and boost conversions.
+- [Best Practices: Tagging](https://help.quantcast.com/docs/best-practices-tagging.md): Build a successful tagging strategy for your campaign with key metrics, Q Pixel implementation, and audience insights to enhance performance and conversions.
+- [Best Practices: Tagging by Vertical](https://help.quantcast.com/docs/best-practices-tagging-by-vertical.md): Implement a robust tagging strategy with Live Tag to enhance audience insights and optimize conversion paths across your website for better campaign success.
+- [Best Practices: Targeting: CPA and ROAS](https://help.quantcast.com/docs/best-practices-targeting-cpa-and-roas.md): Optimize your campaigns with Quantcast's guide on CPA, ROAS, retargeting, and best practices for driving performance and conversions effectively.
+- [Best Practices: Under Delivery](https://help.quantcast.com/docs/best-practices-under-delivery.md)
+- [Best Practices: Viewability](https://help.quantcast.com/docs/best-practices-viewability.md)
+- [Driving 5x More Ticket Sales with Quantcast](https://help.quantcast.com/docs/driving-5x-more-ticket-sales-with-quantcast.md): Quantcast is an incredibly powerful way to drive ticket sales, especially with our Ticketmaster integration and unparalleled suite of targeting tools.
+- [Frequently Asked Questions](https://help.quantcast.com/docs/frequently-asked-questions.md)
+- [FAQ: Ad Set Set Up](https://help.quantcast.com/docs/faq-ad-set-set-up.md): Understand recency windows for targeted ads and explore how Agent Q provides instant support and insights for seamless campaign management.
+- [FAQ: AI](https://help.quantcast.com/docs/faq-ai.md): Unlock insights with Analysis by Q, Agent Q, and the Audience Graph for optimized ad performance and audience targeting in a cookieless world.
+- [FAQs: Audience](https://help.quantcast.com/docs/faqs-audience.md): Learn about Audience Sizing, insights, and demographics for global audiences, including data collection timelines and keyword audience creation.
+- [FAQ: Audio Advertising](https://help.quantcast.com/docs/faq-audio-advertising.md)
+- [FAQs: Brand Lift Live](https://help.quantcast.com/docs/faqs-bll.md): Quantcast's Brand Lift Live measures real-time campaign impact on brand metrics, enabling mid-campaign optimizations for better awareness and favorability.
+- [FAQs: Brand Safety](https://help.quantcast.com/docs/faqs-brand-safety.md): Ensure brand safety with Quantcast's global blocklist, custom allowlists, and real-time monitoring to prevent ad misplacement and fraud.
+- [FAQs: Bulk Pacing](https://help.quantcast.com/docs/faq-for-bulk-pacing.md): Learn how to use the pacing spreadsheet in the Quantcast Platform to set budget targets, manage ad delivery, and optimize your campaign effectively.
+- [FAQs: Campaign Management](https://help.quantcast.com/docs/faqs-campaign-management.md): Explore Quantcast's bidding strategies, budget management, and frequency capping to optimize your ad campaigns effectively and achieve your marketing goals.
+- [FAQs: Campaign Objectives](https://help.quantcast.com/docs/faqs-campaign-objectives.md): Learn how to define campaign objectives like Reach, Video Views, and Traffic to optimize your advertising strategy and maximize budget efficiency.
+- [FAQ: Cookieless Advertising](https://help.quantcast.com/docs/faq-cookieless-advertising.md): Learn the essentials of cookieless activation for conversion and reach/frequency campaigns, including tracking, costs, and audience targeting strategies.
+- [FAQs: Cookieless Measurement](https://help.quantcast.com/docs/faqs-cookieless-measurement.md): Learn how to generate accurate probabilistic attribution scores and validate results in a cookieless environment with Quantcast's advanced modeling techniques.
+- [FAQ: Connected TV (CTV)](https://help.quantcast.com/docs/faq-connected-tv-ctv.md): Explore why Quantcast's real-time data outperforms ACR for targeting audiences, enhancing CTV campaigns with multi-signal insights and effective measurement.
+- [FAQ: Conversion API](https://help.quantcast.com/docs/faq-conversion-api.md)
+- [FAQ: Creatives](https://help.quantcast.com/docs/faq-creatives.md): Explore top-performing display ad sizes and learn how to set up native display ads seamlessly on the Quantcast platform for optimal campaign success.
+- [FAQs: Credit Card Payments](https://help.quantcast.com/docs/faqs-credit-card-payments.md): Learn how to pay for ad sets with credit cards, manage billing, and ensure your payment info is secure with our comprehensive guide.
+- [FAQs: Credits, Discounts and Promotions](https://help.quantcast.com/docs/faqs-credits-discounts-and-promotions.md): Learn how Auction Protect prevents credit-funded and paid ad sets from competing, and explore offer codes, editing options, and credit limitations.
+- [FAQs: Custom Pacing](https://help.quantcast.com/docs/faqs-custom-pacing.md)
+- [FAQ: Insights Lab](https://help.quantcast.com/docs/faq-insights-lab.md): Explore Insight Labs for performance trends, Funnel Impact, Video Completion Engagement, and more to optimize your ad campaigns effectively.
+- [FAQ: Integral Ad Science (IAS)](https://help.quantcast.com/docs/faq-intregal-ad-science-ias.md)
+- [FAQ: Inventory](https://help.quantcast.com/docs/faq-inventory.md): Quantcast leverages live data and machine learning to combat fraud, ensuring brand safety through proactive, reactive, and collaborative strategies.
+- [FAQ: Keyword Audience Targeting](https://help.quantcast.com/docs/faq-keyword-audience-targeting.md): Learn when to use keyword targeting for upper-funnel campaigns and explore interest vs. contextual targeting for effective audience reach.
+- [FAQ: Keyword Targeting](https://help.quantcast.com/docs/faq-keyword-targeting.md): Learn when to use keyword targeting for upper-funnel campaigns and explore interest vs. contextual targeting for effective audience reach.
+- [FAQs: Live Tag and Event Tags](https://help.quantcast.com/docs/faqs-template.md)
+- [FAQs: Mobile Advertising](https://help.quantcast.com/docs/faqs-mobile-advertising.md): Explore the differences between mobile browser and in-app audiences, ad sets, and creative formats for effective mobile advertising strategies.
+- [FAQ: Other](https://help.quantcast.com/docs/faq-other.md): Unlock new business opportunities with Quantcast's Audience Insights tool, optimizing pitches and managing client accounts seamlessly.
+- [FAQs: Quantcast APIs](https://help.quantcast.com/docs/faqs-quantcast-apis.md)
+- [FAQ: Quantcast Data](https://help.quantcast.com/docs/faq-quantcast-data.md)
+- [FAQ: Reporting](https://help.quantcast.com/docs/faq-reporting.md)
+- [FAQs: Sensitive IAB Categories](https://help.quantcast.com/docs/faqs-sensitive-iab-categories.md)
+- [FAQs: Smart URLs](https://help.quantcast.com/docs/faqs-smart-urls.md)
+- [FAQs: Third Party Reporting for Managed Campaigns](https://help.quantcast.com/docs/third-party-reporting-managed-campaigns.md)
+- [FAQs: Verified by Q](https://help.quantcast.com/docs/faqs-verified-by-q.md): Learn how to set up Verified by Q with Quantcast, find GA4 Measurement ID, and understand attribution settings for effective campaign tracking.
+- [FAQ: Viewability](https://help.quantcast.com/docs/faq-viewability.md)
+- [---](https://help.quantcast.com/docs/faqs-non-quantcast-questions.md): Explore Quantcast's data privacy, support for Gulf countries, and platform features like CRM integrations and footfall analysis. Get your questions answered!
+- [Glossaries](https://help.quantcast.com/docs/glossaries.md)
+- [Glossary of Industry Audiences](https://help.quantcast.com/docs/glossary-of-industry-audiences.md)
+- [Glossary of IAS Segment IDs](https://help.quantcast.com/docs/glossary-of-segment-ids.md)
+- [Glossary of Affinity Audiences](https://help.quantcast.com/docs/glossary-of-affinity-audiences.md)
+- [Glossary of Terms for Marketers](https://help.quantcast.com/docs/glossary-of-terms-for-marketers.md): Explore Quantcast's key terms like Addressable Audience, Ad Set, and Advanced IVT to enhance your advertising strategy and audience targeting.
+- [Glossary of Metrics](https://help.quantcast.com/docs/glossary-of-metrics.md): Explore key metrics like completion rates, click-through rates, and ad spend to optimize your video and audio advertising strategies effectively.
+- [Glossary of Contextual Segment IDs](https://help.quantcast.com/docs/glossary-of-contextual-segment-ids.md)
+- [Glossary of DV Segment IDs](https://help.quantcast.com/docs/glossary-of-dv-segment-ids.md)
+- [Available Segments](https://help.quantcast.com/docs/available-segments.md)
+- [Bombora Segments via LiveRamp](https://help.quantcast.com/docs/bombora-segments-via-liveramp.md)
+- [Bombora Automotive Segments](https://help.quantcast.com/docs/bombora-automotive-segments.md)
+- [Bombora Hobbies and Interests](https://help.quantcast.com/docs/bombora-hobies-and-interests.md)
+- [Bombora Income Segments](https://help.quantcast.com/docs/bombora-income-segments.md)
+- [Bombora Income Changes and Status Segments](https://help.quantcast.com/docs/bombora-income-changes-and-status.md)
+- [Bombora Language Segments](https://help.quantcast.com/docs/bombora-language-segments.md)
+- [Bombora Manufacturing Segments](https://help.quantcast.com/docs/bombora-manufacturing-segments.md)
+- [Bombora Outside Activities Segments](https://help.quantcast.com/docs/bombora-outside-activities-segments.md)
+- [Bombora Sports Fans Segments](https://help.quantcast.com/docs/bombora-sports-fans-segments.md)
+- [Bombora B2B Segments](https://help.quantcast.com/docs/bombora-b2b-segments-1.md)
+- [Bombora B2B Advanced TV Segments](https://help.quantcast.com/docs/bombora-b2b-segments.md)
+- [Bombora B2B Business Segments](https://help.quantcast.com/docs/bombora-b2b-business-segments.md)
+- [Bombora B2B Company Revenue and Company Size Segments](https://help.quantcast.com/docs/bombora-b2b-company-revenue-and-company-size-segments.md)
+- [Bombora B2B Construction and Energy Segments](https://help.quantcast.com/docs/bombora-construction-and-energy-segments.md)
+- [Bombora B2B Decision Maker Segments](https://help.quantcast.com/docs/bombora-b2b-decision-maker-segments.md)
+- [Bombora B2B Finance and Healthcare Segments](https://help.quantcast.com/docs/bombora-finance-and-healthcare-segments.md)
+- [Bombora B2B Human Resources Segments](https://help.quantcast.com/docs/bombora-human-resources-segments.md)
+- [Bombora B2B Industry Segments](https://help.quantcast.com/docs/bombora-industry-segments.md)
+- [Bombora B2B Install Data Segments](https://help.quantcast.com/docs/bombora-b2b-install-data-segments.md)
+- [Bombora B2B Interest Groups](https://help.quantcast.com/docs/bombora-b2b-interest-groups.md)
+- [Bombora B2B Job Function Segments](https://help.quantcast.com/docs/bombora-b2b-job-function-segments.md)
+- [Bombora B2B Manufacturing and Marketing Segments](https://help.quantcast.com/docs/bombora-manufacturing-and-marketing-segments.md)
+- [Bombora B2B Seniority Segments](https://help.quantcast.com/docs/bombora-b2b-seniority-segments.md)
+- [Bombora B2B Technology Segments](https://help.quantcast.com/docs/bombora-b2b-technology-segments.md)
+- [Bombora B2C Advanced TV Segments](https://help.quantcast.com/docs/bombora-advanced-tv-segments.md)
+- [Dun and Bradstreet Segments via LiveRamp](https://help.quantcast.com/docs/dun-and-bradstreet-segments.md)
+- [Dun and Bradstreet Segments](https://help.quantcast.com/docs/dun-and-bradstreet-segments-1.md)
+- [Experian Segments via LiveRamp](https://help.quantcast.com/docs/experian-segments-via-liveramp.md)
+- [Experian Autos, Cars, and Trucks Segments](https://help.quantcast.com/docs/experian-autos-cars-and-trucks-segments.md)
+- [Experian Autos, Cars and Trucks Segments](https://help.quantcast.com/docs/experian-autos-cars-and-trucks-segments-1.md)
+- [Experian Business Executive Segments](https://help.quantcast.com/docs/experian-business-executive-segments.md)
+- [Experian Consumer Behavior Segments](https://help.quantcast.com/docs/experian-consumer-behavior-segments.md)
+- [Experian Consumer Financial Insights Segments](https://help.quantcast.com/docs/experian-consumer-financial-insights-segments.md)
+- [Experian Demographic Segments](https://help.quantcast.com/docs/experian-demographic-segments.md)
+- [Experian Exact Age Segments](https://help.quantcast.com/docs/experian-exact-age-segments.md)
+- [Experian Financial Segments (Other)](https://help.quantcast.com/docs/experian-financial-segments-other.md)
+- [Experian Financial Analytics IQ Segments](https://help.quantcast.com/docs/experian-financial-analytics-iq-segments.md)
+- [Experian Financial FLA Friendly Segments](https://help.quantcast.com/docs/experian-financial-fla-friendly-segments.md)
+- [Experian Geography Segments](https://help.quantcast.com/docs/experian-geography-segments.md)
+- [Experian Housing Attributes Segments](https://help.quantcast.com/docs/experian-housing-attributes-segments.md)
+- [Experian Life Events Segments](https://help.quantcast.com/docs/experian-life-events-segments.md)
+- [Experian Lifestyle and Interest Segments](https://help.quantcast.com/docs/experian-lifestyle-and-interest-segments.md)
+- [Experian Mobile Location Models Segments](https://help.quantcast.com/docs/experian-mobile-location-models-segments.md)
+- [Experian Mosaic Segments](https://help.quantcast.com/docs/experian-mosaic-segments.md)
+- [Experian Psychographic Attitude Segments](https://help.quantcast.com/docs/experian-psychographic-attitude-segments.md)
+- [Experian Retail Shoppers Segments](https://help.quantcast.com/docs/experian-retail-shoppers-segments.md)
+- [Experian Social Media Segments](https://help.quantcast.com/docs/experian-social-media-segments.md)
+- [Experian Television Segments](https://help.quantcast.com/docs/experian-television-segments.md)
+- [Experian Travel Intent Segments](https://help.quantcast.com/docs/experian-travel-intent-segments.md)
+- [Experian True Touch Segments](https://help.quantcast.com/docs/experian-true-touch-segments.md)
+- [Samba TV Segments via LiveRamp](https://help.quantcast.com/docs/samba-tv-segments.md)
+- [Samba TV Ad Exposure Segments](https://help.quantcast.com/docs/samba-tv-ad-exposure-segments.md)
+- [Samba TV Demographic Segments](https://help.quantcast.com/docs/samba-tv-demographic-segments.md)
+- [Samba TV TV Viewership Segments](https://help.quantcast.com/docs/samba-tv-tv-viewership-segments.md)
+- [Samba TV Video Gamers Segments](https://help.quantcast.com/docs/samba-tv-video-gamers-segments.md)
+- [Measure](https://help.quantcast.com/docs/measure.md)
+- [Getting Started](https://help.quantcast.com/docs/getting-started-1.md)
+- [Measure Setup](https://help.quantcast.com/docs/measure-setup.md)
+- [Understanding Audience Interests](https://help.quantcast.com/docs/understanding-audience-interests.md)
+- [Quantify Your Website](https://help.quantcast.com/docs/quantify-your-website.md)
+- [How to Find Your Quantcast Measure Tag](https://help.quantcast.com/docs/how-to-find-your-quantcast-measure-tag.md)
+- [How to Implement Quantcast Measure](https://help.quantcast.com/docs/how-to-implement-quantcast-measure.md): Implement the Quantcast Measure tag to gain insights into your audience's demographics, interests, and behaviors for effective site measurement.
+- [Third Party Implementations](https://help.quantcast.com/docs/third-party-implementations.md)
+- [Implementing Quantcast Measure (Server Side) with Google Tag Manager](https://help.quantcast.com/docs/implementing-quantcast-measure-server-side-with-google-tag-manager.md)
+- [Implementing Quantcast Measure with WordPress](https://help.quantcast.com/docs/implementing-quantcast-measure-with-wordpress.md): Learn how to implement Quantcast Measure on your WordPress site with a simple plugin and your unique P-Code for audience analytics.
+- [Implementing Quantcast Measure on a Blogger Site](https://help.quantcast.com/docs/implementing-the-quantcast-measure-tag-on-a-blogger-site.md)
+- [Implementing Quantcast Measure on a Wix Website](https://help.quantcast.com/docs/implementing-quantcast-measure-on-a-wix-website.md)
+- [Implementing Quantcast Measure with Squarespace](https://help.quantcast.com/docs/implementing-quantcast-measure-with-squarespace.md)
+- [Implementing Quantcast Measure on Weebly](https://help.quantcast.com/docs/implementing-quantcast-measure-on-weebly.md)
+- [Implementing Quantcast Measure with Drupal 7](https://help.quantcast.com/docs/implementing-quantcast-measure-with-drupal-7.md)
+- [Implementing Quantcast measure with Drupal 8](https://help.quantcast.com/docs/implementing-quantcast-measure-with-drupal-8.md)
+- [Implementing Quantcast Measure with Tealium](https://help.quantcast.com/docs/implementing-quantcast-measure-with-tealium.md)
+- [Implementing Quantcast Measure with Joomla](https://help.quantcast.com/docs/implementing-quantcast-measure-with-joomia.md)
+- [Implementing Quantcast Measure with Ensighten](https://help.quantcast.com/docs/implementing-quantcast-measure-with-enlighten.md)
+- [Getting Started with Measure](https://help.quantcast.com/docs/getting-started-with-measure.md)
+- [Getting Started with Quantcast Measure](https://help.quantcast.com/docs/getting-started-with-quantcast-measure.md)
+- [Audience Data](https://help.quantcast.com/docs/audience-data.md)
+- [About Our Data](https://help.quantcast.com/docs/about-our-data-1.md)
+- [Explore Your Data](https://help.quantcast.com/docs/explore-our-data.md)
+- [Explore Your Data: Demographics](https://help.quantcast.com/docs/explore-your-data-demographics.md)
+- [Exploring Your Data: Content Interests](https://help.quantcast.com/docs/exploring-your-data-content-interests.md)
+- [Exploring Your Data: Traffic](https://help.quantcast.com/docs/exploring-your-data-traffic.md)
+- [How to Use Your Data](https://help.quantcast.com/docs/how-to-use-your-data-1.md)
+- [How to Use This Data](https://help.quantcast.com/docs/how-to-use-this-data-1.md)
+- [How to Monitor Your Site's Health](https://help.quantcast.com/docs/how-to-monitor-your-sites-health-1.md)
+- [How to Grow Your Audience With Meaningful Traffic](https://help.quantcast.com/docs/how-to-grow-your-audience-with-meaningful-traffic-1.md)
+- [Glossaries, Best Practices, and FAQs](https://help.quantcast.com/docs/glossaries-best-practices-and-faqs-1.md)
+- [Glossary of Content Interests](https://help.quantcast.com/docs/browsing-interest-definitions.md)
+- [Glossary of IAB Metrics](https://help.quantcast.com/docs/glossary-of-iab-metrics.md): Explore IAB Standard metrics like auto-refresh events, distinct page views, and sessions to understand web traffic and user engagement effectively.
+- [Glossary of Terms for Measure](https://help.quantcast.com/docs/measure-glossary.md)
+- [FAQs: Measure](https://help.quantcast.com/docs/measure-faqs.md): Download audience data in CSV format from Quantcast, including traffic, demographics, and geographies, for accurate insights into your site's performance.
+- [FAQs: Mobile Measure](https://help.quantcast.com/docs/measure-mobile-faqs.md)
+- [Videos](https://help.quantcast.com/docs/videos.md)
+- [Q Suite Demo](https://help.quantcast.com/docs/q-suite-demo.md)
+- [Building a Campaign and an Ad Set](https://help.quantcast.com/docs/building-a-campaign-and-an-ad-set.md)
+- [CTV Campaign Set Up](https://help.quantcast.com/docs/ctv-campaign-set-up.md)
+- [Building Audiences in Audience Insights (IBA)](https://help.quantcast.com/docs/building-audiences-in-planner-iba.md)
+- [First Party Audiences](https://help.quantcast.com/docs/first-party-audiences.md)
+- [Adding Deals and Packages](https://help.quantcast.com/docs/adding-deals-and-packages.md)
+- [Pacing (Budget Control)](https://help.quantcast.com/docs/pacing-budget-control.md)
+- [Choosing the Right Creative](https://help.quantcast.com/docs/choosing-the-right-creative.md)
+- [Live Tag: Placing the Tag on Your Site](https://help.quantcast.com/docs/live-tag-placing-tag.md)
+- [Attribution](https://help.quantcast.com/docs/attribution.md)
+- [Insights Lab](https://help.quantcast.com/docs/insights-lab-1.md)
+- [Platform Settings](https://help.quantcast.com/docs/platform-settings.md)
+- [Log In and Navigation](https://help.quantcast.com/docs/log-in-and-navigation.md)
+- [Configuring Single Sign On](https://help.quantcast.com/docs/configuring-single-sign-on.md)
+- [My Profile Page](https://help.quantcast.com/docs/my-profile-page.md)
+- [Navigating the Quantcast Platform](https://help.quantcast.com/docs/navigating-the-quantcast-platform.md)
+- [Organization Manager](https://help.quantcast.com/docs/organization-manager.md)
+- [Organization and Account Management](https://help.quantcast.com/docs/organization-and-account-management.md)
+- [Accounts](https://help.quantcast.com/docs/accounts.md): Manage your accounts effectively with our guide for organization owners and agencies. Learn to create, edit, and optimize your advertising accounts today!
+- [Payment Center](https://help.quantcast.com/docs/payment-center.md)
+- [Wallet](https://help.quantcast.com/docs/wallet.md): Manage your billing details and saved payment methods in the Wallet section of your Quantcast account for seamless payment processing.
+- [Promotions, Discounts & Credits](https://help.quantcast.com/docs/offer-codes.md): Unlock campaign credits with offer codes on the Quantcast Platform. Redeem easily and maximize your marketing value today!
+- [Quantcast Rewards Program](https://help.quantcast.com/docs/quantcast-rewards-program.md)
+- [Pay-As-You-Go Credit Card Payments](https://help.quantcast.com/docs/understanding-pay-as-you-go-payg-for-your-quantcast-platform-payments-1.md)
+- [Inventory](https://help.quantcast.com/docs/inventory-2.md)
+- [Deal Management](https://help.quantcast.com/docs/deal-management-1.md): Manage your organization's programmatic Deal inventory with ease, activating unique inventory for targeted campaigns and advertisers in the Organization Manager.
+- [Deals and Packages Insights](https://help.quantcast.com/docs/deals-and-packages-insights.md)
+- [Troubleshooting Deals](https://help.quantcast.com/docs/troubleshooting-deals.md)
+- [Exchange and SSP Management](https://help.quantcast.com/docs/exchange-and-ssp-management.md)
+- [Organization Level Default Allow or Block List](https://help.quantcast.com/docs/create-a-new-organization-allow-or-block-list.md)
+- [Account Level Allow or Block Lists](https://help.quantcast.com/docs/account-allow-or-block-lists.md)
+- [SSP Deal Activation](https://help.quantcast.com/docs/ssp-deal-activation.md)
+- [Users](https://help.quantcast.com/docs/users.md): Manage user roles and permissions in your organization easily. Add, edit, or delete users to streamline team access and enhance collaboration.
+- [Teams](https://help.quantcast.com/docs/teams.md): Manage user access in large organizations by creating teams in the Organization Manager. Assign roles, edit settings, and streamline collaboration effectively.
+- [Organization and Account Roles](https://help.quantcast.com/docs/organization-and-account-roles.md): Manage user permissions effectively with Organization and Account Roles, including custom options for tailored access within your organization.
+- [Quantcast Platform Supported Currencies](https://help.quantcast.com/docs/quantcast-platform-supported-currencies.md)
+- [Glossaries, Best Practices, and FAQs](https://help.quantcast.com/docs/glossaries-best-practices-and-faqs.md)
+- [Frequently Asked Questions](https://help.quantcast.com/docs/organization-manager-faqs.md)
+- [FAQ: Deal Management](https://help.quantcast.com/docs/deals-faqs.md): Learn about deal management access levels, common issues, and buyer seat IDs for effective ad campaigns on the Quantcast platform.
+- [FAQ: Payments & Credits](https://help.quantcast.com/docs/faq-payments-credits.md)
+- [FAQs: Domain Lists](https://help.quantcast.com/docs/faqs-doman-lists.md): Learn about managing default block/allow domain lists, access levels, and how changes affect Ad Sets in Quantcast's platform.
+- [FAQs: Exchanges and SSPs](https://help.quantcast.com/docs/exchanges-and-ssps-faqs.md)
+- [FAQ: Organization Management](https://help.quantcast.com/docs/faq-organization-management.md)
+- [FAQ: Quantcast](https://help.quantcast.com/docs/faq-quantcast.md)
+- [Tagging](https://help.quantcast.com/docs/tagging.md)

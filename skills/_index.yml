@@ -1,0 +1,28 @@
+generated: '2026-08-13'
+method: generated
+source: >-
+  https://developers.quantcast.com/docs/ and
+  https://help.quantcast.com/docs/tagging-with-the-quantcast-live-tag-using-the-conversion-api
+note: >-
+  Quantcast publishes no OpenAPI, so these skills are grounded in the
+  published GraphQL schema reference instead — every operation named below
+  appears verbatim in
+  https://developers.quantcast.com/docs/graphql-api/reference/queries/, and
+  every Conversion API field appears verbatim in the help-centre article.
+  Nothing here is invented. Quantcast publishes no AGENTS.md or skill files
+  of its own (searched the developer portal, the 419-page help centre index
+  at help.quantcast.com/llms.txt, and the quantcast GitHub organisation on
+  2026-08-13).
+skills:
+- file: quantcast-authenticate-and-query.md
+  name: Authenticate against the Quantcast Platform and run your first query
+  api: graphql/quantcast-graphql.md
+  operations: [organizations, accounts]
+- file: quantcast-pull-a-metrics-report.md
+  name: Pull a Quantcast account metrics report
+  api: graphql/quantcast-graphql.md
+  operations: [availableBreakdownsAndMetrics, accountMetricsReport, asyncMetricsReport, asyncMetricsReportDownloadURL]
+- file: quantcast-report-offline-conversions.md
+  name: Report offline conversions to Quantcast server-to-server
+  api: https://help.quantcast.com/docs/tagging-with-the-quantcast-live-tag-using-the-conversion-api
+  operations: [acquireBrowserToken, reportConversions]

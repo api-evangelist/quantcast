@@ -1,0 +1,76 @@
+generated: '2026-08-13'
+method: searched
+source: https://developers.quantcast.com/docs/get-started/authentication/
+docs: https://developers.quantcast.com/docs/get-started/authentication/
+note: >-
+  Derived by hand from the published developer documentation rather than from
+  an OpenAPI securityScheme block — Quantcast publishes no OpenAPI. The
+  OAuth 2.0 endpoints below were additionally confirmed against the live
+  discovery documents saved in well-known/.
+summary:
+  types: [oauth2, http, apiKey]
+  api_key_in: [query]
+  oauth2_flows: [clientCredentials]
+schemes:
+- name: QuantcastPlatformOAuth2
+  type: oauth2
+  api: Quantcast Platform GraphQL API
+  flow: clientCredentials
+  token_url: https://auth.quantcast.com/oauth2/default/v1/token
+  client_authentication: client_secret_basic
+  request_content_type: application/x-www-form-urlencoded
+  scopes: [api_access, read_reports]
+  token_type: Bearer
+  token_lifetime_seconds: 3600
+  token_lifetime_note: >-
+    The documentation states each token is valid for one hour, while the
+    sample token response it prints shows expires_in 86400. The prose is the
+    normative statement; both values are recorded because the docs disagree
+    with their own example.
+  expired_token_status: 403
+  presentation:
+    header: Authorization
+    format: 'Bearer <access_token>'
+  identity_provider: Okta
+  credential_issuance: >-
+    API Key and Secret are self-issued from the Quantcast Platform UI
+    (Profile icon -> My Profile -> API Key -> Create API Key). Credentials
+    cannot be recovered; a lost key requires creating a new pair.
+  source: https://developers.quantcast.com/docs/get-started/authentication/
+- name: QuantcastPlatformBearer
+  type: http
+  scheme: bearer
+  api: Quantcast Platform GraphQL API
+  description: >-
+    The GraphQL endpoint itself accepts only the bearer token minted by the
+    client-credentials flow above. An unauthenticated POST to
+    https://developers.quantcast.com/api/v2/graphql returns HTTP 401 with
+    {"error":"No authentication token in request"} — probed 2026-08-13.
+  source: https://developers.quantcast.com/docs/graphql-api/usage/requests-to-graphql/
+- name: QuantcastConversionAccountId
+  type: apiKey
+  in: query
+  parameter: a
+  api: Quantcast Conversion API
+  description: >-
+    The Conversion API and the browser token endpoint on
+    pixel.quantserve.com are keyed by the Quantcast account id (pCode) passed
+    as the `a` query parameter. This is an account identifier, not a secret
+    credential; the documented trust model relies on the browser token
+    (issued by the /token endpoint) or on client_user_agent + client_ip to
+    identify the user. Quantcast documents no bearer token or signed request
+    for this surface.
+  source: https://help.quantcast.com/docs/tagging-with-the-quantcast-live-tag-using-the-conversion-api
+authorization_server:
+  issuer: https://auth.quantcast.com
+  discovery:
+  - well-known/quantcast-openid-configuration.json
+  - well-known/quantcast-oauth-authorization-server.json
+  documented_token_endpoint: https://auth.quantcast.com/oauth2/default/v1/token
+  discovery_token_endpoint: https://auth.quantcast.com/oauth2/v1/token
+  discovery_note: >-
+    The developer docs call the `default` custom authorization server
+    (/oauth2/default/v1/token); the org-level discovery document advertises
+    the org authorization server (/oauth2/v1/token). Use the documented
+    `default` endpoint — the api_access and read_reports scopes are defined
+    on it, not on the org server.

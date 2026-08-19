@@ -1,0 +1,115 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  https://developers.quantcast.com/docs/reporting-api/reference/,
+  https://developers.quantcast.com/docs/graphql-api/usage/rate-limits/
+format: custom-json
+format_note: >-
+  Not RFC 9457. The REST Reporting API defines its own flat envelope; the
+  GraphQL API returns the spec's standard errors[] array with rate-limit
+  detail carried in extensions.rateLimit. Quantcast publishes no named error
+  codes or error-code registry for either surface — only HTTP status classes
+  and human-readable messages.
+envelopes:
+- api: Quantcast Platform Reporting API (legacy REST)
+  content_type: application/json
+  shape:
+    status: HTTP status code
+    error: Error class
+    message: Human-readable error message
+    request_id: Request ID for debugging and support requests (may be absent)
+  note: >-
+    The docs instruct callers to quote request_id when contacting the
+    Quantcast account team, which makes it the de facto support correlator.
+  source: https://developers.quantcast.com/docs/reporting-api/reference/
+- api: Quantcast Platform GraphQL API
+  content_type: application/json
+  shape:
+    errors: GraphQL errors array
+    extensions.rateLimit: rate-limit accounting returned alongside errors
+  note: >-
+    Rate-limit rejections return an error explaining which limit was
+    breached, plus the reset timestamps in extensions.rateLimit.
+  source: https://developers.quantcast.com/docs/graphql-api/usage/rate-limits/
+problems:
+- status: 400
+  title: Bad Request
+  description: >-
+    The request couldn't be understood — usually a malformed JSON body or a
+    missing mandatory field. The message field carries detail.
+  api: Reporting API
+  source: https://developers.quantcast.com/docs/reporting-api/reference/
+- status: 401
+  title: Unauthorized
+  description: >-
+    The session ID or OAuth token used has expired or is invalid. The
+    GraphQL endpoint returns {"error":"No authentication token in request"}
+    when the Authorization header is absent (probed 2026-08-13).
+  remediation: Re-run the client-credentials grant and retry with a fresh bearer token.
+  api: both
+  source: https://developers.quantcast.com/docs/reporting-api/reference/
+- status: 403
+  title: Forbidden
+  description: >-
+    The request has been refused. Two documented causes: the access token has
+    expired (the authentication guide states an expired token returns 403,
+    not 401), or the logged-in user lacks permission on the resource. An
+    error code of REQUEST_LIMIT_EXCEEDED means the organisation's API request
+    limits were exceeded.
+  remediation: >-
+    Mint a new token, or have an organisation Owner assign the user to the
+    account in the Platform UI.
+  api: both
+  source: https://developers.quantcast.com/docs/reporting-api/reference/
+- status: 404
+  title: Not Found
+  description: >-
+    The requested resource couldn't be found, or the method isn't allowed for
+    that resource.
+  api: Reporting API
+  source: https://developers.quantcast.com/docs/reporting-api/reference/
+- status: 413
+  title: Report Too Large
+  description: >-
+    The response would exceed the 10MB limit. Requests are also rejected for
+    time windows beyond 13 months.
+  remediation: Narrow the time window or the breakdown set and re-request.
+  api: Reporting API
+  source: https://developers.quantcast.com/docs/reporting-api/reference/
+- status: 429
+  title: Too Many Requests
+  description: >-
+    Rate limit exceeded — 5 requests per second or 10 concurrent requests on
+    the Reporting API.
+  remediation: Back off and retry.
+  api: Reporting API
+  source: https://developers.quantcast.com/docs/reporting-api/reference/
+- status: 500
+  title: Internal Server Error
+  description: >-
+    An error occurred inside the Developers API Platform. The docs direct
+    callers to Quantcast Customer Support.
+  api: Reporting API
+  source: https://developers.quantcast.com/docs/reporting-api/reference/
+graphql_errors:
+- id: query-depth-exceeded
+  description: Query nesting deeper than 50 levels is rejected.
+  source: https://developers.quantcast.com/docs/graphql-api/usage/rate-limits/
+- id: query-complexity-exceeded
+  description: >-
+    The 10,000-token-per-minute complexity budget was exhausted.
+    extensions.rateLimit.queryComplexityResetTime reports when it refills.
+  source: https://developers.quantcast.com/docs/graphql-api/usage/rate-limits/
+- id: request-rate-exceeded
+  description: >-
+    The 10,000-requests-per-minute budget was exhausted.
+    extensions.rateLimit.requestResetTime reports when it refills.
+  source: https://developers.quantcast.com/docs/graphql-api/usage/rate-limits/
+conversion_api_errors:
+  note: >-
+    The Conversion API documentation defines input rules but publishes no
+    status-code table. Two documented rejection conditions: an unhashed email
+    address is rejected (only SHA-256 hashes are accepted), and the browser
+    token endpoint may refuse to issue a token when the request lacks the
+    required consent signals.
+  source: https://help.quantcast.com/docs/tagging-with-the-quantcast-live-tag-using-the-conversion-api

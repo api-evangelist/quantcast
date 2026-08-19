@@ -1,0 +1,147 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  https://developers.quantcast.com/docs/graphql-api/,
+  https://help.quantcast.com/docs/tagging-with-the-quantcast-live-tag-using-the-conversion-api
+note: >-
+  Cross-cutting request/response semantics for the two Quantcast APIs. The
+  Platform API is GraphQL and read-only, so several conventions that this
+  artifact normally captures — idempotency keys, expansion, sparse
+  fieldsets — do not exist here, and are recorded as absent rather than
+  guessed at.
+authentication:
+  style: oauth2-client-credentials + bearer
+  header: 'Authorization: Bearer <access_token>'
+  token_ttl: 1 hour (documentation prose); the sample response shows expires_in 86400
+  detail: authentication/quantcast-authentication.yml
+  conversion_api: account id in the `a` query parameter; no bearer token
+transport:
+  graphql:
+    endpoint: https://developers.quantcast.com/api/v2/graphql
+    method: POST
+    method_note: >-
+      "In GraphQL, you'll provide a JSON-encoded body whether you're
+      performing a query or a mutation, so the HTTP verb is POST." The
+      endpoint is constant regardless of operation.
+    content_type: application/json
+    body: >-
+      A JSON object carrying a string called "query". Newlines inside the
+      query string must be escaped or the schema will not parse it.
+    https_only: true
+  conversion_api:
+    endpoint: https://pixel.quantserve.com/conversion
+    method: POST
+    content_type: application/json
+    body: a JSON ARRAY of conversion objects (batched by default)
+    endpoint_note: >-
+      The prose names "/conversions" while the worked curl example posts to
+      "/conversion". The example is the executable statement; both are
+      recorded because the provider's own page disagrees with itself.
+idempotency:
+  supported: false
+  header: null
+  note: >-
+    No idempotency key on any surface. The GraphQL API publishes zero
+    mutations, so there is nothing to make idempotent. The Conversion API
+    accepts an `orderid` per event, but Quantcast explicitly documents it as
+    a reporting field, NOT a de-duplication key: the Live Tag "is totally
+    stateless — if it's on the page, the conversion event is getting fired",
+    and the published remedy for duplicate order IDs is client-side
+    transaction-state tracking, not server-side dedupe. No Idempotency
+    pointer is emitted for this provider.
+  source: https://help.quantcast.com/docs/fix-duplicate-order-ids
+pagination:
+  style: relay-style-connections + offset
+  applies_to: every list query on the GraphQL API
+  request_params:
+  - name: limit
+    type: Int
+    description: Limit the number of response objects.
+  - name: offset
+    type: Int
+    description: Offset from which to query for objects.
+  response_fields:
+  - name: edges
+    description: The array of returned objects.
+  - name: pageInfo.hasMore
+    description: Whether more objects remain beyond this page.
+  - name: totalCount
+    description: Total number of matching objects.
+  note: >-
+    Cursor-based paging is not offered — limit/offset with a hasMore flag is
+    the only mechanism. Every *Connections type in the schema shares this
+    shape.
+  source: https://developers.quantcast.com/docs/graphql-api/reference/objects/
+filtering:
+  request_param: filter
+  style: typed filter input objects, one per collection (AccountsFilterInput, CampaignsFilterInput, ...)
+  operators_seen: [eq]
+  example: 'accounts(filter: {id: {eq: $accountId}})'
+  source: https://developers.quantcast.com/docs/graphql-api/reference/input-objects/
+sorting:
+  request_param: order
+  style: typed order-by input objects (AccountsOrderByInput, ...) with asc/desc and a field enum
+  example: 'accounts(order: {asc: ACCOUNTS_NAME})'
+field_selection:
+  style: graphql-native
+  note: >-
+    Field selection is the GraphQL selection set. There is no REST-style
+    `expand` or sparse-fieldset parameter, and none is needed. Note the cost
+    consequence: every selected scalar costs 1 complexity token and every
+    selected object costs 2, so the selection set is also the billing unit.
+  detail: rate-limits/quantcast-rate-limits.yml
+metadata:
+  note: >-
+    No user-defined metadata bag on platform objects. The closest published
+    field is Campaign.billingRefId ("Purchase order number or other
+    customer-defined identifier"). Conversion events carry a free-form
+    `labels` array used for reporting and targeting.
+request_tracing:
+  header: null
+  body_field: request_id
+  applies_to: Reporting API (legacy REST) responses, both success and error
+  note: >-
+    Correlation is carried in the response body, not a header, and the docs
+    ask callers to quote it when contacting support. No request-id
+    convention is documented for the GraphQL API.
+  source: https://developers.quantcast.com/docs/reporting-api/reference/
+versioning:
+  style: uri-path
+  current: v2
+  detail: lifecycle/quantcast-lifecycle.yml
+error_envelope:
+  graphql: standard GraphQL errors[] with extensions.rateLimit
+  rest: '{status, error, message, request_id}'
+  rfc9457: false
+  detail: errors/quantcast-problem-types.yml
+rate_limit_signalling:
+  transport: response body (extensions.rateLimit) — not headers
+  detail: rate-limits/quantcast-rate-limits.yml
+data_conventions:
+  money: >-
+    Budgets and eCPM caps are integers in account-currency MICRO-UNITS — a
+    $100 daily budget is 100000000. Conversion revenue, by contrast, is a
+    plain decimal without a currency denomination (99.95) in the account's
+    billing currency. The two surfaces disagree; agents must not mix them.
+  time: >-
+    ISO-8601 DateTime on GraphQL objects. Reporting API dates and timestamps
+    are YYYY-MM-DD hh:mm:ss in the ACCOUNT timezone, not UTC. Report windows
+    are start-inclusive and end-exclusive. Conversion event `time` is a Unix
+    epoch value; both seconds and milliseconds are accepted.
+  identifiers: >-
+    Numeric Long ids for organizations, accounts, campaigns, ad sets,
+    creatives and surveys; String ids for roles, teams and users. Each
+    account also carries a `pcode` dataset identifier (e.g. p-0tYGNqnar28h2)
+    which is what the tagging and Conversion API surfaces key on.
+  pii: >-
+    Email addresses may only be sent to the Conversion API as SHA-256
+    hashes; unhashed values are rejected.
+consent:
+  required: true
+  frameworks: [IAB TCF v2, IAB US Privacy, IAB Global Privacy Platform]
+  note: >-
+    The browser-token endpoint is a consent gate as well as an identity
+    endpoint: gdpr is strictly required, gdpr_consent MUST be present when
+    gdpr=1, and the endpoint may refuse to issue a token when consent is
+    missing. Any agent integrating this surface inherits that obligation.
+  detail: conformance/quantcast-conformance.yml

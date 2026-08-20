@@ -116,6 +116,11 @@ apis:
   - Conversion
   - Server-to-Server
   - Tagging
+  - Measurements
+  tags_raw:
+  - Conversion
+  - Server-to-Server
+  - Tagging
   - Measurement
   properties:
   - type: Documentation
@@ -134,6 +139,11 @@ apis:
   humanURL: https://help.quantcast.com/docs/measure
   baseURL: https://pixel.quantserve.com
   tags:
+  - Measurements
+  - Tagging
+  - Audience Insights
+  - SDK
+  tags_raw:
   - Measurement
   - Tagging
   - Audience Insights

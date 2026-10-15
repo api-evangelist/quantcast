@@ -3,6 +3,7 @@ method: searched
 checked:
 - https://vendor-list.consensu.org/v3/vendor-list.json
 - https://www.twilio.com/docs/segment/connections/destinations/catalog/quantcast
+- wordpress/integrations/wordpress-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: Twilio Segment
@@ -71,4 +72,21 @@ edges:
     - App
   detected_by: sweep-adtech.py
   detected: '2026-10-14'
+- partner_name: WordPress (own)
+  partner: wordpress
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://wordpress.org/plugins/quantcast-choice/
+  mirror_of: wordpress/integrations/wordpress-integration-edges.yml
+  apps:
+  - Quantcast Choice
+  listing_count: 1
+  detected: '2026-10-15'
+  detected_by: mirror-platform-listings.py
+  category: WordPress plugin
 source: https://www.twilio.com/docs/segment/connections/destinations/catalog/quantcast

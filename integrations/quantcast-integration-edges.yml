@@ -13,32 +13,6 @@ checked:
 - wordpress/integrations/wordpress-integration-edges.yml
 marketplace_apps: []
 edges:
-- partner_name: Twilio Segment
-  partner: segment
-  partner_match: aggregator
-  marketplace: coverage
-  channel: partner-built
-  direction: partner-built
-  type: coverage
-  relationship: connector-coverage
-  evidence: https://www.twilio.com/docs/segment/connections/destinations/catalog/quantcast
-  coverage_role:
-  - destination
-  cdp_signals:
-    destination:
-      catalog_entries:
-      - quantcast
-      status: PUBLIC
-      partner_owned: false
-      connection_modes:
-      - device:mobile
-      - device:web
-      accepted_methods:
-      - Identify
-      - Page
-      - Track
-  detected_by: sweep-cdp.py
-  first_seen: '2026-10-14'
 - partner_name: IAB Europe TCF Global Vendor List
   partner: null
   partner_match: domain
@@ -126,4 +100,30 @@ edges:
     detected: '2026-10-18'
   detected_by: sweep-official-sdks.py
   first_seen: '2026-10-18'
+- partner_name: Twilio Segment
+  partner: segment
+  partner_match: aggregator
+  marketplace: coverage
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: connector-coverage
+  evidence: https://www.twilio.com/docs/segment/connections/destinations/catalog/quantcast
+  coverage_role:
+  - destination
+  cdp_signals:
+    destination:
+      catalog_entries:
+      - quantcast
+      status: PUBLIC
+      partner_owned: false
+      connection_modes:
+      - device:mobile
+      - device:web
+      accepted_methods:
+      - Identify
+      - Page
+      - Track
+  detected_by: sweep-cdp.py
+  first_seen: '2026-10-14'
 source: https://www.twilio.com/docs/segment/connections/destinations/catalog/quantcast

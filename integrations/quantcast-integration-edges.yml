@@ -11,6 +11,11 @@ checked:
 - https://vendor-list.consensu.org/v3/vendor-list.json
 - https://www.twilio.com/docs/segment/connections/destinations/catalog/quantcast
 - wordpress/integrations/wordpress-integration-edges.yml
+- https://hubgloo.opxar.com/search
+- https://www.tagtoday.net/certifications
+- https://www.tagtoday.net/registry
+- https://www.tagtoday.net/registry-search/
+- adobe-experience-cloud/integrations/adobe-experience-cloud-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: IAB Europe TCF Global Vendor List
@@ -53,23 +58,6 @@ edges:
     - App
   detected_by: sweep-adtech.py
   detected: '2026-10-14'
-- partner_name: WordPress (own)
-  partner: wordpress
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://wordpress.org/plugins/quantcast-choice/
-  mirror_of: wordpress/integrations/wordpress-integration-edges.yml
-  apps:
-  - Quantcast Choice
-  listing_count: 1
-  detected: '2026-10-15'
-  detected_by: mirror-platform-listings.py
-  category: WordPress plugin
 - partner_name: Maven Central
   partner: maven-central
   partner_match: register
@@ -126,4 +114,92 @@ edges:
       - Track
   detected_by: sweep-cdp.py
   first_seen: '2026-10-14'
+- partner_name: TAG Registry (Trustworthy Accountability Group)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.tagtoday.net/registry
+  category: Ad fraud / brand safety certification (TAG)
+  contract_reference:
+    register: TAG Registry (tagtoday.net/registry; registry-search public endpoint)
+    spec_file: null
+    standard: TAG certification programs (Trustworthy Accountability Group)
+    role: tag-certified
+    registrations:
+    - registered_name: Quantcast
+      register_id: https://hubgloo.opxar.com/company/52817304224
+      verified_by_tag: true
+      seals:
+      - Certified Against Fraud
+      - Brand Safety Certified
+      matched_domain: quantcast.com
+      matched_by: domain
+      identity: wikidata Q4047758 'Quantcast' P856 https://www.quantcast.com
+    signal_note: certified_products = one entry per TAG seal held (CAF, BSC, CAM, CAP, CFT), never per registration;
+      validation route (third-party auditor / TAG Validation / self-attestation) and category are context. The registry
+      shows current seals only and marks none expired, so lapsed is false. Verified by TAG with no seal = listing
+      only (participation)
+    detected_by: sweep-tag-certified-ad-fraud.py
+    detected: '2026-10-23'
+    certified_products:
+    - product: Brand Safety Certified
+      product_type: Brand Safety Certified
+      standard: TAG Brand Safety Certified (BSC)
+      lapsed: false
+      validation:
+      - third-party auditor
+      categories:
+      - Intermediary
+      scope:
+      - the company’s global operations
+    - product: Certified Against Fraud
+      product_type: Certified Against Fraud
+      standard: TAG Certified Against Fraud (CAF)
+      lapsed: false
+      validation:
+      - third-party auditor
+      categories:
+      - Intermediary
+      scope:
+      - the company’s global operations
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  detected_by: sweep-tag-certified-ad-fraud.py
+  first_seen: '2026-10-23'
+- partner_name: WordPress (own)
+  partner: wordpress
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://wordpress.org/plugins/quantcast-choice/
+  mirror_of: wordpress/integrations/wordpress-integration-edges.yml
+  apps:
+  - Quantcast Choice
+  listing_count: 1
+  detected: '2026-10-15'
+  detected_by: mirror-platform-listings.py
+  category: WordPress plugin
+- partner_name: Adobe Experience Cloud (own)
+  partner: adobe-experience-cloud
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://exchange.adobe.com/apps/ec/90054
+  mirror_of: adobe-experience-cloud/integrations/adobe-experience-cloud-integration-edges.yml
+  apps:
+  - Quantcast
+  listing_count: 1
+  detected: '2026-10-23'
+  detected_by: mirror-platform-listings.py
+  category: Adobe Exchange Experience Cloud listing (Audience Manager)
 source: https://www.twilio.com/docs/segment/connections/destinations/catalog/quantcast

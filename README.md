@@ -1,4 +1,4 @@
-# quantcast
+# Quantcast
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,19 +64,128 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Quantcast — AI-driven programmatic advertising platform and audience measurement (Choice CMP now operated by InMobi)
+Quantcast is a San Francisco-headquartered digital advertising and audience intelligence company founded in 2006. Its flagship offering is the Quantcast Platform, an AI-driven demand-side platform (DSP) for programmatic display, video, CTV, audio, mobile, and native advertising, powered by the company's proprietary Audience Graph and Ara AI engine. Quantcast also operates Quantcast Measure, a free audience measurement product that has tagged millions of digital properties to produce demographic, psychographic, and cross-device audience insights. For programmatic access, Quantcast exposes a developer portal at developers.quantcast.com built around a GraphQL API (v2) for reporting, campaign management, and audience operations on the Quantcast Platform, secured via OAuth 2.0 client credentials. A server-to-server Conversion API augments the browser-side Live Tag for offline and signal-loss-resilient conversion tracking. Quantcast Choice, the company's IAB TCF v2-compliant Consent Management Platform, was acquired by InMobi in August 2023 and is now operated as part of InMobi CMP; legacy Quantcast Choice mobile SDKs remain published under the quantcast GitHub organization for reference. Quantcast also open-sources the Quantcast File System (QFS), a C++ distributed file system, and mobile/Roku measurement SDKs.
 
-- Website: https://www.quantcast.com
-- Developer portal: https://developers.quantcast.com
-- GraphQL API: https://developers.quantcast.com/api/v2/graphql
-- GitHub: https://github.com/quantcast
+**Areas:** Advertising · AdTech · Programmatic Advertising · DSP · Audience Measurement · Audience Intelligence · Consent Management · CMP · Privacy · GraphQL · Conversion Tracking · CTV
 
-## APIs
+## Quantcast on APIs.io
 
-- **Quantcast Platform GraphQL API** — OAuth 2.0 client-credentials; reporting, campaign management, and audience operations on the Quantcast Platform.
-- **Quantcast Conversion API** — server-to-server companion to the Live Tag for offline and signal-loss-resilient conversion tracking.
-- **Quantcast Measure (Live Tag)** — free audience measurement tag with iOS, Android, Roku, and PhoneGap SDKs.
+Everything profiled for Quantcast is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/quantcast/](https://apis.io/providers/quantcast/)** — or go straight to one of the APIs or properties below.
 
-## Notes
+### APIs (3)
 
-Quantcast Choice (CMP) was acquired by InMobi in August 2023 and is now part of InMobi CMP. The legacy `choice-mobile-ios` repo remains under the `quantcast` GitHub organization.
+- [Quantcast Platform GraphQL API](https://apis.io/apis/quantcast/quantcast-platform-graphql-api/) — The Quantcast Platform GraphQL API (v2) is the primary programmatic interface to the Quantcast advertising platform. It exposes queries and mutations for…
+- [Quantcast Conversion API](https://apis.io/apis/quantcast/quantcast-conversion-api/) — The Quantcast Conversion API is a server-to-server integration that augments the browser-side Quantcast Live Tag. It accepts a JSON array of conversion…
+- [Quantcast Measure (Live Tag)](https://apis.io/apis/quantcast/quantcast-measure-tag/) — Quantcast Measure is the company's free audience measurement product. Publishers and advertisers integrate the Quantcast Live Tag (Q Pixel) on web…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### GraphQL (1)
+
+GraphQL schemas.
+
+- [Quantcast GraphQL API](https://apis.io/graphqls/quantcast/quantcast-graphql/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [quantcast](https://apis.io/servers/quantcast/quantcast/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Quantcast Authentication](https://apis.io/security/quantcast/quantcast-authentication/)
+- [Quantcast Domain Security](https://apis.io/security/quantcast/quantcast-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Quantcast Scopes](https://apis.io/scopes/quantcast/quantcast-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Quantcast Plans Pricing](https://apis.io/plans/quantcast/quantcast-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Quantcast Rate Limits](https://apis.io/rate-limits/quantcast/quantcast-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.quantcast.com)
+- [Documentation](https://developers.quantcast.com/docs/graphql-api)
+- [Getting started](https://developers.quantcast.com/docs/get-started/)
+- [API reference](https://developers.quantcast.com/docs/graphql-api/reference/)
+- [Sign up](https://www.quantcast.com/signup/)
+- [Support](https://help.quantcast.com)
+- [Blog](https://www.quantcast.com/resources/blog/)
+- [Terms of service](https://legal.quantcast.com/)
+- [Privacy policy](https://www.quantcast.com/privacy/)
+- [GitHub](https://github.com/quantcast)
+- [Status](https://status.quantcast.com)
+
+## API Evangelist rating
+
+**Kin Score 43.4** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 79.5 |
+| Contract quality | 5.3 |
+| Contract governance | 18.2 |
+| Operational transparency | 50.0 |
+| Developer ergonomics | 80.4 |
+| Access clarity | 34.2 |
+
+**Agent readiness 21.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 31.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/quantcast/](https://apis.io/providers/quantcast/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Quantcast: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/quantcast/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
